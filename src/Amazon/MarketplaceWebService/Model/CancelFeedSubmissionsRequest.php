@@ -19,31 +19,32 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_CancelFeedSubmissionsRequest
+ * CancelFeedSubmissionsRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>FeedSubmissionIdList: MarketplaceWebService_Model_IdList</li>
- * <li>FeedTypeList: MarketplaceWebService_Model_TypeList</li>
+ * <li>FeedSubmissionIdList: IdList</li>
+ * <li>FeedTypeList: TypeList</li>
  * <li>SubmittedFromDate: string</li>
  * <li>SubmittedToDate: string</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends MarketplaceWebService_Model
+class CancelFeedSubmissionsRequest extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_CancelFeedSubmissionsRequest
+     * Construct new CancelFeedSubmissionsRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -52,8 +53,8 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>FeedSubmissionIdList: MarketplaceWebService_Model_IdList</li>
-     * <li>FeedTypeList: MarketplaceWebService_Model_TypeList</li>
+     * <li>FeedSubmissionIdList: IdList</li>
+     * <li>FeedTypeList: TypeList</li>
      * <li>SubmittedFromDate: string</li>
      * <li>SubmittedToDate: string</li>
      *
@@ -65,8 +66,8 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
-        'FeedTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
+        'FeedSubmissionIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
+        'FeedTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
         'SubmittedFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'SubmittedToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         );
@@ -87,7 +88,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the Marketplace property.
      * 
      * @param string Marketplace
-     * @return this instance
+     * @return $this
      */
     public function setMarketplace($value) 
     {
@@ -99,7 +100,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsRequest instance
+     * @return CancelFeedSubmissionsRequest instance
      */
     public function withMarketplace($value)
     {
@@ -132,7 +133,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the Merchant property.
      * 
      * @param string Merchant
-     * @return this instance
+     * @return $this
      */
     public function setMerchant($value) 
     {
@@ -144,7 +145,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsRequest instance
+     * @return CancelFeedSubmissionsRequest instance
      */
     public function withMerchant($value)
     {
@@ -177,7 +178,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the MWSAuthToken property.
      *
      * @param string MWSAuthToken
-     * @return this instance
+     * @return $this
      */
     public function setMWSAuthToken($value)
     {
@@ -189,7 +190,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsRequest instance
+     * @return CancelFeedSubmissionsRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -234,7 +235,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the FeedSubmissionIdList  and returns this instance
      * 
      * @param IdList $value FeedSubmissionIdList
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsRequest instance
+     * @return CancelFeedSubmissionsRequest instance
      */
     public function withFeedSubmissionIdList($value)
     {
@@ -280,7 +281,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the FeedTypeList  and returns this instance
      * 
      * @param TypeList $value FeedTypeList
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsRequest instance
+     * @return CancelFeedSubmissionsRequest instance
      */
     public function withFeedTypeList($value)
     {
@@ -314,7 +315,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the SubmittedFromDate property.
      * 
      * @param string SubmittedFromDate
-     * @return this instance
+     * @return $this
      */
     public function setSubmittedFromDate($value) 
     {
@@ -326,7 +327,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the SubmittedFromDate and returns this instance
      * 
      * @param string $value SubmittedFromDate
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsRequest instance
+     * @return CancelFeedSubmissionsRequest instance
      */
     public function withSubmittedFromDate($value)
     {
@@ -359,7 +360,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the SubmittedToDate property.
      * 
      * @param string SubmittedToDate
-     * @return this instance
+     * @return $this
      */
     public function setSubmittedToDate($value) 
     {
@@ -371,7 +372,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsRequest extends Marketpla
      * Sets the value of the SubmittedToDate and returns this instance
      * 
      * @param string $value SubmittedToDate
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsRequest instance
+     * @return CancelFeedSubmissionsRequest instance
      */
     public function withSubmittedToDate($value)
     {

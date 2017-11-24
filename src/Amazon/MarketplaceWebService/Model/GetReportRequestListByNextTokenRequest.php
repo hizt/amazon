@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest
+ * GetReportRequestListByNextTokenRequest
  * 
  * Properties:
  * <ul>
@@ -35,12 +36,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends MarketplaceWebService_Model
+class GetReportRequestListByNextTokenRequest extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest
+     * Construct new GetReportRequestListByNextTokenRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -78,7 +79,7 @@ class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends
      * Sets the value of the Marketplace property.
      * 
      * @param string Marketplace
-     * @return this instance
+     * @return $this
      */
     public function setMarketplace($value) 
     {
@@ -90,7 +91,7 @@ class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest instance
+     * @return GetReportRequestListByNextTokenRequest instance
      */
     public function withMarketplace($value)
     {
@@ -123,7 +124,7 @@ class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends
      * Sets the value of the Merchant property.
      * 
      * @param string Merchant
-     * @return this instance
+     * @return $this
      */
     public function setMerchant($value) 
     {
@@ -135,7 +136,7 @@ class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest instance
+     * @return GetReportRequestListByNextTokenRequest instance
      */
     public function withMerchant($value)
     {
@@ -168,7 +169,7 @@ class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends
      * Sets the value of the MWSAuthToken property.
      *
      * @param string MWSAuthToken
-     * @return this instance
+     * @return $this
      */
     public function setMWSAuthToken($value)
     {
@@ -180,7 +181,7 @@ class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest instance
+     * @return GetReportRequestListByNextTokenRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -213,7 +214,7 @@ class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends
      * Sets the value of the NextToken property.
      * 
      * @param string NextToken
-     * @return this instance
+     * @return $this
      */
     public function setNextToken($value) 
     {
@@ -225,7 +226,7 @@ class MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest extends
      * Sets the value of the NextToken and returns this instance
      * 
      * @param string $value NextToken
-     * @return MarketplaceWebService_Model_GetReportRequestListByNextTokenRequest instance
+     * @return GetReportRequestListByNextTokenRequest instance
      */
     public function withNextToken($value)
     {

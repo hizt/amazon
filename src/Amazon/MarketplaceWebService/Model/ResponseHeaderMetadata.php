@@ -14,8 +14,11 @@
  *  Marketplace Web Service Products PHP5 Library
  * 
  */
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
-class MarketplaceWebService_Model_ResponseHeaderMetadata {
+
+class ResponseHeaderMetadata {
 
   const REQUEST_ID = 'x-mws-request-id';
   const RESPONSE_CONTEXT = 'x-mws-response-context';

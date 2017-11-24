@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleListResponse
+ * GetReportScheduleListResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportScheduleListResult: MarketplaceWebService_Model_GetReportScheduleListResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportScheduleListResult: GetReportScheduleListResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportScheduleListResponse extends MarketplaceWebService_Model
+class GetReportScheduleListResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleListResponse
+     * Construct new GetReportScheduleListResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportScheduleListResult: MarketplaceWebService_Model_GetReportScheduleListResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportScheduleListResult: GetReportScheduleListResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportScheduleListResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportScheduleListResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportScheduleListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportScheduleListResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportScheduleListResponse from XML string
+     * Construct GetReportScheduleListResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_GetReportScheduleListResponse 
+     * @return GetReportScheduleListResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportScheduleListResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetReportScheduleListResponse(($response->item(0))); 
+            return new GetReportScheduleListResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportScheduleListResponse from provided XML. 
+            throw new Exception ("Unable to construct GetReportScheduleListResponse from provided XML. 
                                   Make sure that GetReportScheduleListResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResponse extends Marketpl
      * Sets the value of the GetReportScheduleListResult  and returns this instance
      * 
      * @param GetReportScheduleListResult $value GetReportScheduleListResult
-     * @return MarketplaceWebService_Model_GetReportScheduleListResponse instance
+     * @return GetReportScheduleListResponse instance
      */
     public function withGetReportScheduleListResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResponse extends Marketpl
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_GetReportScheduleListResponse instance
+     * @return GetReportScheduleListResponse instance
      */
     public function withResponseMetadata($value)
     {

@@ -19,28 +19,29 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportListByNextTokenResult
+ * GetReportListByNextTokenResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
- * <li>ReportInfo: MarketplaceWebService_Model_ReportInfo</li>
+ * <li>ReportInfo: ReportInfo</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportListByNextTokenResult extends MarketplaceWebService_Model
+class GetReportListByNextTokenResult extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportListByNextTokenResult
+     * Construct new GetReportListByNextTokenResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -49,7 +50,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      * 
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
-     * <li>ReportInfo: MarketplaceWebService_Model_ReportInfo</li>
+     * <li>ReportInfo: ReportInfo</li>
      *
      * </ul>
      */
@@ -58,7 +59,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportInfo')),
+        'ReportInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportInfo')),
         );
         parent::__construct($data);
     }
@@ -77,7 +78,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      * Sets the value of the NextToken property.
      * 
      * @param string NextToken
-     * @return this instance
+     * @return $this
      */
     public function setNextToken($value) 
     {
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      * Sets the value of the NextToken and returns this instance
      * 
      * @param string $value NextToken
-     * @return MarketplaceWebService_Model_GetReportListByNextTokenResult instance
+     * @return GetReportListByNextTokenResult instance
      */
     public function withNextToken($value)
     {
@@ -122,7 +123,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      * Sets the value of the HasNext property.
      * 
      * @param bool HasNext
-     * @return this instance
+     * @return $this
      */
     public function setHasNext($value) 
     {
@@ -134,7 +135,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      * Sets the value of the HasNext and returns this instance
      * 
      * @param bool $value HasNext
-     * @return MarketplaceWebService_Model_GetReportListByNextTokenResult instance
+     * @return GetReportListByNextTokenResult instance
      */
     public function withHasNext($value)
     {
@@ -167,7 +168,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      * Sets the value of the ReportInfo.
      * 
      * @param mixed ReportInfo or an array of ReportInfo ReportInfo
-     * @return this instance
+     * @return $this
      */
     public function setReportInfoList($reportInfo) 
     {
@@ -185,7 +186,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      * <code>withReportInfo($reportInfo1, $reportInfo2)</code>
      * 
      * @param ReportInfo  $reportInfoArgs one or more ReportInfo
-     * @return MarketplaceWebService_Model_GetReportListByNextTokenResult  instance
+     * @return GetReportListByNextTokenResult  instance
      */
     public function withReportInfo($reportInfoArgs)
     {

@@ -19,28 +19,29 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleCountRequest
+ * GetReportScheduleCountRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
+ * <li>ReportTypeList: TypeList</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportScheduleCountRequest extends MarketplaceWebService_Model
+class GetReportScheduleCountRequest extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleCountRequest
+     * Construct new GetReportScheduleCountRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -49,7 +50,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
+     * <li>ReportTypeList: TypeList</li>
      *
      * </ul>
      */
@@ -59,7 +60,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
+        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
         );
         parent::__construct($data);
     }
@@ -78,7 +79,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
      * Sets the value of the Marketplace property.
      * 
      * @param string Marketplace
-     * @return this instance
+     * @return $this
      */
     public function setMarketplace($value) 
     {
@@ -90,7 +91,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_GetReportScheduleCountRequest instance
+     * @return GetReportScheduleCountRequest instance
      */
     public function withMarketplace($value)
     {
@@ -123,7 +124,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
      * Sets the value of the Merchant property.
      * 
      * @param string Merchant
-     * @return this instance
+     * @return $this
      */
     public function setMerchant($value) 
     {
@@ -135,7 +136,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_GetReportScheduleCountRequest instance
+     * @return GetReportScheduleCountRequest instance
      */
     public function withMerchant($value)
     {
@@ -168,7 +169,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
      * Sets the value of the MWSAuthToken property.
      *
      * @param string MWSAuthToken
-     * @return this instance
+     * @return $this
      */
     public function setMWSAuthToken($value)
     {
@@ -180,7 +181,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_GetReportScheduleCountRequest instance
+     * @return GetReportScheduleCountRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -225,7 +226,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountRequest extends Marketpl
      * Sets the value of the ReportTypeList  and returns this instance
      * 
      * @param TypeList $value ReportTypeList
-     * @return MarketplaceWebService_Model_GetReportScheduleCountRequest instance
+     * @return GetReportScheduleCountRequest instance
      */
     public function withReportTypeList($value)
     {

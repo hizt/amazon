@@ -19,28 +19,29 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleListResult
+ * GetReportScheduleListResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
- * <li>ReportSchedule: MarketplaceWebService_Model_ReportSchedule</li>
+ * <li>ReportSchedule: ReportSchedule</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportScheduleListResult extends MarketplaceWebService_Model
+class GetReportScheduleListResult extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleListResult
+     * Construct new GetReportScheduleListResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -49,7 +50,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * 
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
-     * <li>ReportSchedule: MarketplaceWebService_Model_ReportSchedule</li>
+     * <li>ReportSchedule: ReportSchedule</li>
      *
      * </ul>
      */
@@ -58,7 +59,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportSchedule')),
+        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
         );
         parent::__construct($data);
     }
@@ -77,7 +78,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * Sets the value of the NextToken property.
      * 
      * @param string NextToken
-     * @return this instance
+     * @return $this
      */
     public function setNextToken($value) 
     {
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * Sets the value of the NextToken and returns this instance
      * 
      * @param string $value NextToken
-     * @return MarketplaceWebService_Model_GetReportScheduleListResult instance
+     * @return GetReportScheduleListResult instance
      */
     public function withNextToken($value)
     {
@@ -122,7 +123,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * Sets the value of the HasNext property.
      * 
      * @param bool HasNext
-     * @return this instance
+     * @return $this
      */
     public function setHasNext($value) 
     {
@@ -134,7 +135,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * Sets the value of the HasNext and returns this instance
      * 
      * @param bool $value HasNext
-     * @return MarketplaceWebService_Model_GetReportScheduleListResult instance
+     * @return GetReportScheduleListResult instance
      */
     public function withHasNext($value)
     {
@@ -167,7 +168,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * Sets the value of the ReportSchedule.
      * 
      * @param mixed ReportSchedule or an array of ReportSchedule ReportSchedule
-     * @return this instance
+     * @return $this
      */
     public function setReportScheduleList($reportSchedule) 
     {
@@ -185,7 +186,7 @@ class MarketplaceWebService_Model_GetReportScheduleListResult extends Marketplac
      * <code>withReportSchedule($reportSchedule1, $reportSchedule2)</code>
      * 
      * @param ReportSchedule  $reportScheduleArgs one or more ReportSchedule
-     * @return MarketplaceWebService_Model_GetReportScheduleListResult  instance
+     * @return GetReportScheduleListResult  instance
      */
     public function withReportSchedule($reportScheduleArgs)
     {

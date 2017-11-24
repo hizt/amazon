@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_IdList
+ * IdList
  * 
  * Properties:
  * <ul>
@@ -33,12 +34,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_IdList extends MarketplaceWebService_Model
+class IdList extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_IdList
+     * Construct new IdList
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -71,7 +72,7 @@ class MarketplaceWebService_Model_IdList extends MarketplaceWebService_Model
      * Sets the value of the Id.
      * 
      * @param string or an array of string Id
-     * @return this instance
+     * @return $this
      */
     public function setId($id) 
     {
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_IdList extends MarketplaceWebService_Model
      * <code>withId($id1, $id2)</code>
      * 
      * @param string  $stringArgs one or more Id
-     * @return MarketplaceWebService_Model_IdList  instance
+     * @return IdList  instance
      */
     public function withId($stringArgs)
     {

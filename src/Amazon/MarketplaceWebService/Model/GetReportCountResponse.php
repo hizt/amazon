@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportCountResponse
+ * GetReportCountResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportCountResult: MarketplaceWebService_Model_GetReportCountResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportCountResult: GetReportCountResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportCountResponse extends MarketplaceWebService_Model
+class GetReportCountResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportCountResponse
+     * Construct new GetReportCountResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportCountResult: MarketplaceWebService_Model_GetReportCountResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportCountResult: GetReportCountResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportCountResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportCountResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportCountResult' => array('FieldValue' => null, 'FieldType' => 'GetReportCountResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportCountResponse from XML string
+     * Construct GetReportCountResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_GetReportCountResponse 
+     * @return GetReportCountResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportCountResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetReportCountResponse(($response->item(0))); 
+            return new GetReportCountResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportCountResponse from provided XML. 
+            throw new Exception ("Unable to construct GetReportCountResponse from provided XML. 
                                   Make sure that GetReportCountResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_GetReportCountResponse extends MarketplaceWebS
      * Sets the value of the GetReportCountResult  and returns this instance
      * 
      * @param GetReportCountResult $value GetReportCountResult
-     * @return MarketplaceWebService_Model_GetReportCountResponse instance
+     * @return GetReportCountResponse instance
      */
     public function withGetReportCountResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_GetReportCountResponse extends MarketplaceWebS
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_GetReportCountResponse instance
+     * @return GetReportCountResponse instance
      */
     public function withResponseMetadata($value)
     {

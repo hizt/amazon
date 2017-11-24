@@ -19,34 +19,34 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-#require_once ('MarketplaceWebService/Model.php');  
-require_once ('/mnt/disk1/wwwroot/www.glitzcloud.com/protected/extensions/OutService/library/Amazon/MarketplaceWebService/Model.php');  
-    
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
+
 
 /**
- * MarketplaceWebService_Model_ErrorResponse
+ * ErrorResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>Error: MarketplaceWebService_Model_Error</li>
+ * <li>Error: Error</li>
  * <li>RequestId: string</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Model
+class ErrorResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ErrorResponse
+     * Construct new ErrorResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>Error: MarketplaceWebService_Model_Error</li>
+     * <li>Error: Error</li>
      * <li>RequestId: string</li>
      *
      * </ul>
@@ -54,7 +54,7 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
     public function __construct($data = null)
     {
         $this->fields = array (
-        'Error' => array('FieldValue' => array(), 'FieldType' => 'MarketplaceWebService_Model_Error'),
+        'Error' => array('FieldValue' => array(), 'FieldType' => 'Error'),
         'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
@@ -62,22 +62,22 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
 
        
     /**
-     * Construct MarketplaceWebService_Model_ErrorResponse from XML string
+     * Construct ErrorResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_ErrorResponse 
+     * @return ErrorResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:ErrorResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_ErrorResponse(($response->item(0))); 
+            return new ErrorResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_ErrorResponse from provided XML. 
+            throw new Exception ("Unable to construct ErrorResponse from provided XML. 
                                   Make sure that ErrorResponse is a root element");
         }
           
@@ -97,7 +97,7 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
      * Sets the value of the Error.
      * 
      * @param mixed Error or an array of Error Error
-     * @return this instance
+     * @return $this
      */
     public function setError($error) 
     {
@@ -115,7 +115,7 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
      * <code>withError($error1, $error2)</code>
      * 
      * @param Error  $errorArgs one or more Error
-     * @return MarketplaceWebService_Model_ErrorResponse  instance
+     * @return ErrorResponse  instance
      */
     public function withError($errorArgs)
     {
@@ -151,7 +151,7 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
      * Sets the value of the RequestId property.
      * 
      * @param string RequestId
-     * @return this instance
+     * @return $this
      */
     public function setRequestId($value) 
     {
@@ -163,7 +163,7 @@ class MarketplaceWebService_Model_ErrorResponse extends MarketplaceWebService_Mo
      * Sets the value of the RequestId and returns this instance
      * 
      * @param string $value RequestId
-     * @return MarketplaceWebService_Model_ErrorResponse instance
+     * @return ErrorResponse instance
      */
     public function withRequestId($value)
     {

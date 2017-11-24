@@ -19,31 +19,32 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportCountRequest
+ * GetReportCountRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
+ * <li>ReportTypeList: TypeList</li>
  * <li>Acknowledged: bool</li>
  * <li>AvailableFromDate: string</li>
  * <li>AvailableToDate: string</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebService_Model
+class GetReportCountRequest extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportCountRequest
+     * Construct new GetReportCountRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -52,7 +53,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportTypeList: MarketplaceWebService_Model_TypeList</li>
+     * <li>ReportTypeList: TypeList</li>
      * <li>Acknowledged: bool</li>
      * <li>AvailableFromDate: string</li>
      * <li>AvailableToDate: string</li>
@@ -65,7 +66,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_TypeList'),
+        'ReportTypeList' => array('FieldValue' => null, 'FieldType' => 'TypeList'),
         'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
         'AvailableFromDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'AvailableToDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
@@ -87,7 +88,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Marketplace property.
      * 
      * @param string Marketplace
-     * @return this instance
+     * @return $this
      */
     public function setMarketplace($value) 
     {
@@ -99,7 +100,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_GetReportCountRequest instance
+     * @return GetReportCountRequest instance
      */
     public function withMarketplace($value)
     {
@@ -132,7 +133,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Merchant property.
      * 
      * @param string Merchant
-     * @return this instance
+     * @return $this
      */
     public function setMerchant($value) 
     {
@@ -144,7 +145,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_GetReportCountRequest instance
+     * @return GetReportCountRequest instance
      */
     public function withMerchant($value)
     {
@@ -177,7 +178,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the MWSAuthToken property.
      *
      * @param string MWSAuthToken
-     * @return this instance
+     * @return $this
      */
     public function setMWSAuthToken($value)
     {
@@ -189,7 +190,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_GetReportCountRequest instance
+     * @return GetReportCountRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -234,7 +235,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the ReportTypeList  and returns this instance
      * 
      * @param TypeList $value ReportTypeList
-     * @return MarketplaceWebService_Model_GetReportCountRequest instance
+     * @return GetReportCountRequest instance
      */
     public function withReportTypeList($value)
     {
@@ -268,7 +269,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Acknowledged property.
      * 
      * @param bool Acknowledged
-     * @return this instance
+     * @return $this
      */
     public function setAcknowledged($value) 
     {
@@ -280,7 +281,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the Acknowledged and returns this instance
      * 
      * @param bool $value Acknowledged
-     * @return MarketplaceWebService_Model_GetReportCountRequest instance
+     * @return GetReportCountRequest instance
      */
     public function withAcknowledged($value)
     {
@@ -313,7 +314,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the AvailableFromDate property.
      * 
      * @param string AvailableFromDate
-     * @return this instance
+     * @return $this
      */
     public function setAvailableFromDate($value) 
     {
@@ -325,7 +326,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the AvailableFromDate and returns this instance
      * 
      * @param string $value AvailableFromDate
-     * @return MarketplaceWebService_Model_GetReportCountRequest instance
+     * @return GetReportCountRequest instance
      */
     public function withAvailableFromDate($value)
     {
@@ -358,7 +359,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the AvailableToDate property.
      * 
      * @param string AvailableToDate
-     * @return this instance
+     * @return $this
      */
     public function setAvailableToDate($value) 
     {
@@ -370,7 +371,7 @@ class MarketplaceWebService_Model_GetReportCountRequest extends MarketplaceWebSe
      * Sets the value of the AvailableToDate and returns this instance
      * 
      * @param string $value AvailableToDate
-     * @return MarketplaceWebService_Model_GetReportCountRequest instance
+     * @return GetReportCountRequest instance
      */
     public function withAvailableToDate($value)
     {

@@ -19,40 +19,42 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
-    
+
+
 
 /**
- * MarketplaceWebService_Model_SubmitFeedResult
+ * SubmitFeedResult
  * 
  * Properties:
  * <ul>
  * 
- * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+ * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_SubmitFeedResult extends MarketplaceWebService_Model
+class SubmitFeedResult extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_SubmitFeedResult
+     * Construct new SubmitFeedResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+     * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_FeedSubmissionInfo'),
+        'FeedSubmissionInfo' => array('FieldValue' => null, 'FieldType' => 'FeedSubmissionInfo'),
         );
         parent::__construct($data);
     }
@@ -83,7 +85,7 @@ class MarketplaceWebService_Model_SubmitFeedResult extends MarketplaceWebService
      * Sets the value of the FeedSubmissionInfo  and returns this instance
      * 
      * @param FeedSubmissionInfo $value FeedSubmissionInfo
-     * @return MarketplaceWebService_Model_SubmitFeedResult instance
+     * @return SubmitFeedResult instance
      */
     public function withFeedSubmissionInfo($value)
     {

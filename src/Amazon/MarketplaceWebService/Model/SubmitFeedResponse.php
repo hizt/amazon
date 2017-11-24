@@ -19,65 +19,67 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
-    
+
+
 
 /**
- * MarketplaceWebService_Model_SubmitFeedResponse
+ * SubmitFeedResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>SubmitFeedResult: MarketplaceWebService_Model_SubmitFeedResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>SubmitFeedResult: SubmitFeedResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebService_Model
+class SubmitFeedResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_SubmitFeedResponse
+     * Construct new SubmitFeedResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>SubmitFeedResult: MarketplaceWebService_Model_SubmitFeedResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>SubmitFeedResult: SubmitFeedResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_SubmitFeedResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'SubmitFeedResult' => array('FieldValue' => null, 'FieldType' => 'SubmitFeedResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_SubmitFeedResponse from XML string
+     * Construct SubmitFeedResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_SubmitFeedResponse 
+     * @return SubmitFeedResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:SubmitFeedResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_SubmitFeedResponse(($response->item(0))); 
+            return new SubmitFeedResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_SubmitFeedResponse from provided XML. 
+            throw new Exception ("Unable to construct SubmitFeedResponse from provided XML. 
                                   Make sure that SubmitFeedResponse is a root element");
         }
           
@@ -109,7 +111,7 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
      * Sets the value of the SubmitFeedResult  and returns this instance
      * 
      * @param SubmitFeedResult $value SubmitFeedResult
-     * @return MarketplaceWebService_Model_SubmitFeedResponse instance
+     * @return SubmitFeedResponse instance
      */
     public function withSubmitFeedResult($value)
     {
@@ -155,7 +157,7 @@ class MarketplaceWebService_Model_SubmitFeedResponse extends MarketplaceWebServi
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_SubmitFeedResponse instance
+     * @return SubmitFeedResponse instance
      */
     public function withResponseMetadata($value)
     {

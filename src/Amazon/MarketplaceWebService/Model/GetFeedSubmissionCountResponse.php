@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionCountResponse
+ * GetFeedSubmissionCountResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetFeedSubmissionCountResult: MarketplaceWebService_Model_GetFeedSubmissionCountResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetFeedSubmissionCountResult: GetFeedSubmissionCountResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends MarketplaceWebService_Model
+class GetFeedSubmissionCountResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionCountResponse
+     * Construct new GetFeedSubmissionCountResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetFeedSubmissionCountResult: MarketplaceWebService_Model_GetFeedSubmissionCountResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetFeedSubmissionCountResult: GetFeedSubmissionCountResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetFeedSubmissionCountResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetFeedSubmissionCountResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetFeedSubmissionCountResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionCountResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetFeedSubmissionCountResponse from XML string
+     * Construct GetFeedSubmissionCountResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse 
+     * @return GetFeedSubmissionCountResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetFeedSubmissionCountResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetFeedSubmissionCountResponse(($response->item(0))); 
+            return new GetFeedSubmissionCountResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetFeedSubmissionCountResponse from provided XML. 
+            throw new Exception ("Unable to construct GetFeedSubmissionCountResponse from provided XML. 
                                   Make sure that GetFeedSubmissionCountResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
      * Sets the value of the GetFeedSubmissionCountResult  and returns this instance
      * 
      * @param GetFeedSubmissionCountResult $value GetFeedSubmissionCountResult
-     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse instance
+     * @return GetFeedSubmissionCountResponse instance
      */
     public function withGetFeedSubmissionCountResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionCountResponse extends Marketp
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_GetFeedSubmissionCountResponse instance
+     * @return GetFeedSubmissionCountResponse instance
      */
     public function withResponseMetadata($value)
     {

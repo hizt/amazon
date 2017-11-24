@@ -19,27 +19,28 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_ManageReportScheduleResult
+ * ManageReportScheduleResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>Count: int</li>
- * <li>ReportSchedule: MarketplaceWebService_Model_ReportSchedule</li>
+ * <li>ReportSchedule: ReportSchedule</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_ManageReportScheduleResult extends MarketplaceWebService_Model
+class ManageReportScheduleResult extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ManageReportScheduleResult
+     * Construct new ManageReportScheduleResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -47,7 +48,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
      * <ul>
      * 
      * <li>Count: int</li>
-     * <li>ReportSchedule: MarketplaceWebService_Model_ReportSchedule</li>
+     * <li>ReportSchedule: ReportSchedule</li>
      *
      * </ul>
      */
@@ -55,7 +56,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
     {
         $this->fields = array (
         'Count' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_ReportSchedule')),
+        'ReportSchedule' => array('FieldValue' => array(), 'FieldType' => array('ReportSchedule')),
         );
         parent::__construct($data);
     }
@@ -74,7 +75,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
      * Sets the value of the Count property.
      * 
      * @param int Count
-     * @return this instance
+     * @return $this
      */
     public function setCount($value) 
     {
@@ -86,7 +87,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
      * Sets the value of the Count and returns this instance
      * 
      * @param int $value Count
-     * @return MarketplaceWebService_Model_ManageReportScheduleResult instance
+     * @return ManageReportScheduleResult instance
      */
     public function withCount($value)
     {
@@ -119,7 +120,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
      * Sets the value of the ReportSchedule.
      * 
      * @param mixed ReportSchedule or an array of ReportSchedule ReportSchedule
-     * @return this instance
+     * @return $this
      */
     public function setReportScheduleList($reportSchedule) 
     {
@@ -137,7 +138,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
      * <code>withReportSchedule($reportSchedule1, $reportSchedule2)</code>
      * 
      * @param ReportSchedule  $reportScheduleArgs one or more ReportSchedule
-     * @return MarketplaceWebService_Model_ManageReportScheduleResult  instance
+     * @return ManageReportScheduleResult  instance
      */
     public function withReportSchedule($reportScheduleArgs)
     {

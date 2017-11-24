@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
-    
+
 
 /**
- * MarketplaceWebService_Model_FeedSubmissionInfo
+ * FeedSubmissionInfo
  * 
  * Properties:
  * <ul>
@@ -38,12 +39,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebService_Model
+class FeedSubmissionInfo extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_FeedSubmissionInfo
+     * Construct new FeedSubmissionInfo
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -86,7 +87,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedSubmissionId property.
      * 
      * @param string FeedSubmissionId
-     * @return this instance
+     * @return $this
      */
     public function setFeedSubmissionId($value) 
     {
@@ -98,7 +99,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedSubmissionId and returns this instance
      * 
      * @param string $value FeedSubmissionId
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withFeedSubmissionId($value)
     {
@@ -131,7 +132,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedType property.
      * 
      * @param string FeedType
-     * @return this instance
+     * @return $this
      */
     public function setFeedType($value) 
     {
@@ -143,7 +144,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedType and returns this instance
      * 
      * @param string $value FeedType
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withFeedType($value)
     {
@@ -176,7 +177,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the SubmittedDate property.
      * 
      * @param string SubmittedDate
-     * @return this instance
+     * @return $this
      */
     public function setSubmittedDate($value) 
     {
@@ -188,7 +189,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the SubmittedDate and returns this instance
      * 
      * @param string $value SubmittedDate
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withSubmittedDate($value)
     {
@@ -221,7 +222,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedProcessingStatus property.
      * 
      * @param string FeedProcessingStatus
-     * @return this instance
+     * @return $this
      */
     public function setFeedProcessingStatus($value) 
     {
@@ -233,7 +234,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the FeedProcessingStatus and returns this instance
      * 
      * @param string $value FeedProcessingStatus
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withFeedProcessingStatus($value)
     {
@@ -266,7 +267,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the StartedProcessingDate property.
      * 
      * @param string StartedProcessingDate
-     * @return this instance
+     * @return $this
      */
     public function setStartedProcessingDate($value) 
     {
@@ -278,7 +279,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the StartedProcessingDate and returns this instance
      * 
      * @param string $value StartedProcessingDate
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withStartedProcessingDate($value)
     {
@@ -311,7 +312,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the CompletedProcessingDate property.
      * 
      * @param string CompletedProcessingDate
-     * @return this instance
+     * @return $this
      */
     public function setCompletedProcessingDate($value) 
     {
@@ -323,7 +324,7 @@ class MarketplaceWebService_Model_FeedSubmissionInfo extends MarketplaceWebServi
      * Sets the value of the CompletedProcessingDate and returns this instance
      * 
      * @param string $value CompletedProcessingDate
-     * @return MarketplaceWebService_Model_FeedSubmissionInfo instance
+     * @return FeedSubmissionInfo instance
      */
     public function withCompletedProcessingDate($value)
     {

@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportScheduleCountResult
+ * GetReportScheduleCountResult
  * 
  * Properties:
  * <ul>
@@ -33,12 +34,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportScheduleCountResult extends MarketplaceWebService_Model
+class GetReportScheduleCountResult extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportScheduleCountResult
+     * Construct new GetReportScheduleCountResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -71,7 +72,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountResult extends Marketpla
      * Sets the value of the Count property.
      * 
      * @param int Count
-     * @return this instance
+     * @return $this
      */
     public function setCount($value) 
     {
@@ -83,7 +84,7 @@ class MarketplaceWebService_Model_GetReportScheduleCountResult extends Marketpla
      * Sets the value of the Count and returns this instance
      * 
      * @param int $value Count
-     * @return MarketplaceWebService_Model_GetReportScheduleCountResult instance
+     * @return GetReportScheduleCountResult instance
      */
     public function withCount($value)
     {

@@ -19,40 +19,41 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_RequestReportResult
+ * RequestReportResult
  * 
  * Properties:
  * <ul>
  * 
- * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+ * <li>ReportRequestInfo: ReportRequestInfo</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebService_Model
+class RequestReportResult extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_RequestReportResult
+     * Construct new RequestReportResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>ReportRequestInfo: MarketplaceWebService_Model_ReportRequestInfo</li>
+     * <li>ReportRequestInfo: ReportRequestInfo</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ReportRequestInfo'),
+        'ReportRequestInfo' => array('FieldValue' => null, 'FieldType' => 'ReportRequestInfo'),
         );
         parent::__construct($data);
     }
@@ -83,7 +84,7 @@ class MarketplaceWebService_Model_RequestReportResult extends MarketplaceWebServ
      * Sets the value of the ReportRequestInfo  and returns this instance
      * 
      * @param ReportRequestInfo $value ReportRequestInfo
-     * @return MarketplaceWebService_Model_RequestReportResult instance
+     * @return RequestReportResult instance
      */
     public function withReportRequestInfo($value)
     {

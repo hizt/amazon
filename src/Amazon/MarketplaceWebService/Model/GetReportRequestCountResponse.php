@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportRequestCountResponse
+ * GetReportRequestCountResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportRequestCountResult: MarketplaceWebService_Model_GetReportRequestCountResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportRequestCountResult: GetReportRequestCountResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportRequestCountResponse extends MarketplaceWebService_Model
+class GetReportRequestCountResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequestCountResponse
+     * Construct new GetReportRequestCountResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportRequestCountResult: MarketplaceWebService_Model_GetReportRequestCountResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportRequestCountResult: GetReportRequestCountResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportRequestCountResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportRequestCountResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportRequestCountResult' => array('FieldValue' => null, 'FieldType' => 'GetReportRequestCountResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportRequestCountResponse from XML string
+     * Construct GetReportRequestCountResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_GetReportRequestCountResponse 
+     * @return GetReportRequestCountResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportRequestCountResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetReportRequestCountResponse(($response->item(0))); 
+            return new GetReportRequestCountResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportRequestCountResponse from provided XML. 
+            throw new Exception ("Unable to construct GetReportRequestCountResponse from provided XML. 
                                   Make sure that GetReportRequestCountResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_GetReportRequestCountResponse extends Marketpl
      * Sets the value of the GetReportRequestCountResult  and returns this instance
      * 
      * @param GetReportRequestCountResult $value GetReportRequestCountResult
-     * @return MarketplaceWebService_Model_GetReportRequestCountResponse instance
+     * @return GetReportRequestCountResponse instance
      */
     public function withGetReportRequestCountResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_GetReportRequestCountResponse extends Marketpl
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_GetReportRequestCountResponse instance
+     * @return GetReportRequestCountResponse instance
      */
     public function withResponseMetadata($value)
     {

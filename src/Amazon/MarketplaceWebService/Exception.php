@@ -16,13 +16,13 @@
  * 
  */
 
-
+namespace Amazon\MarketplaceWebService;
 /**
  * Marketplace Web Service  Exception provides details of errors 
  * returned by Marketplace Web Service  service
  *
  */
-class MarketplaceWebService_Exception extends Exception
+class Exception extends \Exception
 
 {
     /** @var string */
@@ -62,7 +62,7 @@ class MarketplaceWebService_Exception extends Exception
         parent::__construct($this->message);
         if (array_key_exists("Exception", $errorInfo)) {
             $exception = $errorInfo["Exception"];
-            if ($exception instanceof MarketplaceWebService_Exception) {
+            if ($exception instanceof Exception) {
                 $this->statusCode = $exception->getStatusCode();
                 $this->errorCode = $exception->getErrorCode();
                 $this->errorType = $exception->getErrorType();

@@ -19,28 +19,29 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionListResult
+ * GetFeedSubmissionListResult
  * 
  * Properties:
  * <ul>
  * 
  * <li>NextToken: string</li>
  * <li>HasNext: bool</li>
- * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+ * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetFeedSubmissionListResult extends MarketplaceWebService_Model
+class GetFeedSubmissionListResult extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListResult
+     * Construct new GetFeedSubmissionListResult
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -49,7 +50,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListResult extends Marketplac
      * 
      * <li>NextToken: string</li>
      * <li>HasNext: bool</li>
-     * <li>FeedSubmissionInfo: MarketplaceWebService_Model_FeedSubmissionInfo</li>
+     * <li>FeedSubmissionInfo: FeedSubmissionInfo</li>
      *
      * </ul>
      */
@@ -58,7 +59,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListResult extends Marketplac
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebService_Model_FeedSubmissionInfo')),
+        'FeedSubmissionInfo' => array('FieldValue' => array(), 'FieldType' => array('FeedSubmissionInfo')),
         );
         parent::__construct($data);
     }
@@ -77,7 +78,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListResult extends Marketplac
      * Sets the value of the NextToken property.
      * 
      * @param string NextToken
-     * @return this instance
+     * @return $this
      */
     public function setNextToken($value) 
     {
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListResult extends Marketplac
      * Sets the value of the NextToken and returns this instance
      * 
      * @param string $value NextToken
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListResult instance
+     * @return GetFeedSubmissionListResult instance
      */
     public function withNextToken($value)
     {
@@ -122,7 +123,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListResult extends Marketplac
      * Sets the value of the HasNext property.
      * 
      * @param bool HasNext
-     * @return this instance
+     * @return $this
      */
     public function setHasNext($value) 
     {
@@ -134,7 +135,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListResult extends Marketplac
      * Sets the value of the HasNext and returns this instance
      * 
      * @param bool $value HasNext
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListResult instance
+     * @return GetFeedSubmissionListResult instance
      */
     public function withHasNext($value)
     {
@@ -167,7 +168,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListResult extends Marketplac
      * Sets the value of the FeedSubmissionInfo.
      * 
      * @param mixed FeedSubmissionInfo or an array of FeedSubmissionInfo FeedSubmissionInfo
-     * @return this instance
+     * @return $this
      */
     public function setFeedSubmissionInfoList($feedSubmissionInfo) 
     {
@@ -185,7 +186,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListResult extends Marketplac
      * <code>withFeedSubmissionInfo($feedSubmissionInfo1, $feedSubmissionInfo2)</code>
      * 
      * @param FeedSubmissionInfo  $feedSubmissionInfoArgs one or more FeedSubmissionInfo
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListResult  instance
+     * @return GetFeedSubmissionListResult  instance
      */
     public function withFeedSubmissionInfo($feedSubmissionInfoArgs)
     {

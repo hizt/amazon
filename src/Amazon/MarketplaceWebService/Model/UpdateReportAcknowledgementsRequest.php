@@ -19,29 +19,30 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest
+ * UpdateReportAcknowledgementsRequest
  * 
  * Properties:
  * <ul>
  * 
  * <li>Marketplace: string</li>
  * <li>Merchant: string</li>
- * <li>ReportIdList: MarketplaceWebService_Model_IdList</li>
+ * <li>ReportIdList: IdList</li>
  * <li>Acknowledged: bool</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends MarketplaceWebService_Model
+class UpdateReportAcknowledgementsRequest extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest
+     * Construct new UpdateReportAcknowledgementsRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -50,7 +51,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * 
      * <li>Marketplace: string</li>
      * <li>Merchant: string</li>
-     * <li>ReportIdList: MarketplaceWebService_Model_IdList</li>
+     * <li>ReportIdList: IdList</li>
      * <li>Acknowledged: bool</li>
      *
      * </ul>
@@ -61,7 +62,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
         'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
         'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ReportIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
+        'ReportIdList' => array('FieldValue' => null, 'FieldType' => 'IdList'),
         'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
         );
         parent::__construct($data);
@@ -81,7 +82,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Marketplace property.
      * 
      * @param string Marketplace
-     * @return this instance
+     * @return $this
      */
     public function setMarketplace($value) 
     {
@@ -93,7 +94,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withMarketplace($value)
     {
@@ -126,7 +127,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Merchant property.
      * 
      * @param string Merchant
-     * @return this instance
+     * @return $this
      */
     public function setMerchant($value) 
     {
@@ -138,7 +139,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withMerchant($value)
     {
@@ -171,7 +172,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the MWSAuthToken property.
      *
      * @param string MWSAuthToken
-     * @return this instance
+     * @return $this
      */
     public function setMWSAuthToken($value)
     {
@@ -183,7 +184,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -228,7 +229,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the ReportIdList  and returns this instance
      * 
      * @param IdList $value ReportIdList
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withReportIdList($value)
     {
@@ -262,7 +263,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Acknowledged property.
      * 
      * @param bool Acknowledged
-     * @return this instance
+     * @return $this
      */
     public function setAcknowledged($value) 
     {
@@ -274,7 +275,7 @@ class MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest extends Ma
      * Sets the value of the Acknowledged and returns this instance
      * 
      * @param bool $value Acknowledged
-     * @return MarketplaceWebService_Model_UpdateReportAcknowledgementsRequest instance
+     * @return UpdateReportAcknowledgementsRequest instance
      */
     public function withAcknowledged($value)
     {

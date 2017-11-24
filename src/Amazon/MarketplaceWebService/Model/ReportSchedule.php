@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_ReportSchedule
+ * ReportSchedule
  * 
  * Properties:
  * <ul>
@@ -35,12 +36,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_Model
+class ReportSchedule extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ReportSchedule
+     * Construct new ReportSchedule
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -77,7 +78,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the ReportType property.
      * 
      * @param string ReportType
-     * @return this instance
+     * @return $this
      */
     public function setReportType($value) 
     {
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the ReportType and returns this instance
      * 
      * @param string $value ReportType
-     * @return MarketplaceWebService_Model_ReportSchedule instance
+     * @return ReportSchedule instance
      */
     public function withReportType($value)
     {
@@ -122,7 +123,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the Schedule property.
      * 
      * @param string Schedule
-     * @return this instance
+     * @return $this
      */
     public function setSchedule($value) 
     {
@@ -134,7 +135,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the Schedule and returns this instance
      * 
      * @param string $value Schedule
-     * @return MarketplaceWebService_Model_ReportSchedule instance
+     * @return ReportSchedule instance
      */
     public function withSchedule($value)
     {
@@ -167,7 +168,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the ScheduledDate property.
      * 
      * @param string ScheduledDate
-     * @return this instance
+     * @return $this
      */
     public function setScheduledDate($value) 
     {
@@ -179,7 +180,7 @@ class MarketplaceWebService_Model_ReportSchedule extends MarketplaceWebService_M
      * Sets the value of the ScheduledDate and returns this instance
      * 
      * @param string $value ScheduledDate
-     * @return MarketplaceWebService_Model_ReportSchedule instance
+     * @return ReportSchedule instance
      */
     public function withScheduledDate($value)
     {

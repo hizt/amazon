@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_TypeList
+ * TypeList
  * 
  * Properties:
  * <ul>
@@ -33,12 +34,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_TypeList extends MarketplaceWebService_Model
+class TypeList extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_TypeList
+     * Construct new TypeList
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -71,7 +72,7 @@ class MarketplaceWebService_Model_TypeList extends MarketplaceWebService_Model
      * Sets the value of the Type.
      * 
      * @param string or an array of string Type
-     * @return this instance
+     * @return $this
      */
     public function setType($type) 
     {
@@ -89,7 +90,7 @@ class MarketplaceWebService_Model_TypeList extends MarketplaceWebService_Model
      * <code>withType($type1, $type2)</code>
      * 
      * @param string  $stringArgs one or more Type
-     * @return MarketplaceWebService_Model_TypeList  instance
+     * @return TypeList  instance
      */
     public function withType($stringArgs)
     {

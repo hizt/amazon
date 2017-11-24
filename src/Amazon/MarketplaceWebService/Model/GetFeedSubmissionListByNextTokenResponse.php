@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse
+ * GetFeedSubmissionListByNextTokenResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetFeedSubmissionListByNextTokenResult: MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetFeedSubmissionListByNextTokenResult: GetFeedSubmissionListByNextTokenResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse extends MarketplaceWebService_Model
+class GetFeedSubmissionListByNextTokenResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse
+     * Construct new GetFeedSubmissionListByNextTokenResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetFeedSubmissionListByNextTokenResult: MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetFeedSubmissionListByNextTokenResult: GetFeedSubmissionListByNextTokenResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetFeedSubmissionListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetFeedSubmissionListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetFeedSubmissionListByNextTokenResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse from XML string
+     * Construct GetFeedSubmissionListByNextTokenResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse 
+     * @return GetFeedSubmissionListByNextTokenResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetFeedSubmissionListByNextTokenResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse(($response->item(0))); 
+            return new GetFeedSubmissionListByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse from provided XML. 
+            throw new Exception ("Unable to construct GetFeedSubmissionListByNextTokenResponse from provided XML. 
                                   Make sure that GetFeedSubmissionListByNextTokenResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse exten
      * Sets the value of the GetFeedSubmissionListByNextTokenResult  and returns this instance
      * 
      * @param GetFeedSubmissionListByNextTokenResult $value GetFeedSubmissionListByNextTokenResult
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse instance
+     * @return GetFeedSubmissionListByNextTokenResponse instance
      */
     public function withGetFeedSubmissionListByNextTokenResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse exten
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_GetFeedSubmissionListByNextTokenResponse instance
+     * @return GetFeedSubmissionListByNextTokenResponse instance
      */
     public function withResponseMetadata($value)
     {

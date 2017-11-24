@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportListByNextTokenResponse
+ * GetReportListByNextTokenResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportListByNextTokenResult: MarketplaceWebService_Model_GetReportListByNextTokenResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportListByNextTokenResult: GetReportListByNextTokenResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportListByNextTokenResponse extends MarketplaceWebService_Model
+class GetReportListByNextTokenResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportListByNextTokenResponse
+     * Construct new GetReportListByNextTokenResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportListByNextTokenResult: MarketplaceWebService_Model_GetReportListByNextTokenResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportListByNextTokenResult: GetReportListByNextTokenResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportListByNextTokenResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportListByNextTokenResult' => array('FieldValue' => null, 'FieldType' => 'GetReportListByNextTokenResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportListByNextTokenResponse from XML string
+     * Construct GetReportListByNextTokenResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_GetReportListByNextTokenResponse 
+     * @return GetReportListByNextTokenResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportListByNextTokenResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetReportListByNextTokenResponse(($response->item(0))); 
+            return new GetReportListByNextTokenResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportListByNextTokenResponse from provided XML. 
+            throw new Exception ("Unable to construct GetReportListByNextTokenResponse from provided XML. 
                                   Make sure that GetReportListByNextTokenResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResponse extends Marke
      * Sets the value of the GetReportListByNextTokenResult  and returns this instance
      * 
      * @param GetReportListByNextTokenResult $value GetReportListByNextTokenResult
-     * @return MarketplaceWebService_Model_GetReportListByNextTokenResponse instance
+     * @return GetReportListByNextTokenResponse instance
      */
     public function withGetReportListByNextTokenResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResponse extends Marke
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_GetReportListByNextTokenResponse instance
+     * @return GetReportListByNextTokenResponse instance
      */
     public function withResponseMetadata($value)
     {

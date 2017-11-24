@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
-    
+
 
 /**
- * MarketplaceWebService_Model_ResponseMetadata
+ * ResponseMetadata
  * 
  * Properties:
  * <ul>
@@ -33,12 +34,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_ResponseMetadata extends MarketplaceWebService_Model
+class ResponseMetadata extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ResponseMetadata
+     * Construct new ResponseMetadata
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -71,7 +72,7 @@ class MarketplaceWebService_Model_ResponseMetadata extends MarketplaceWebService
      * Sets the value of the RequestId property.
      * 
      * @param string RequestId
-     * @return this instance
+     * @return $this
      */
     public function setRequestId($value) 
     {
@@ -83,7 +84,7 @@ class MarketplaceWebService_Model_ResponseMetadata extends MarketplaceWebService
      * Sets the value of the RequestId and returns this instance
      * 
      * @param string $value RequestId
-     * @return MarketplaceWebService_Model_ResponseMetadata instance
+     * @return ResponseMetadata instance
      */
     public function withRequestId($value)
     {

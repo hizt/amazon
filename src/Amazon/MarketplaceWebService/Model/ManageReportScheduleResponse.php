@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_ManageReportScheduleResponse
+ * ManageReportScheduleResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>ManageReportScheduleResult: MarketplaceWebService_Model_ManageReportScheduleResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>ManageReportScheduleResult: ManageReportScheduleResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_ManageReportScheduleResponse extends MarketplaceWebService_Model
+class ManageReportScheduleResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_ManageReportScheduleResponse
+     * Construct new ManageReportScheduleResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>ManageReportScheduleResult: MarketplaceWebService_Model_ManageReportScheduleResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>ManageReportScheduleResult: ManageReportScheduleResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'ManageReportScheduleResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ManageReportScheduleResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'ManageReportScheduleResult' => array('FieldValue' => null, 'FieldType' => 'ManageReportScheduleResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_ManageReportScheduleResponse from XML string
+     * Construct ManageReportScheduleResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_ManageReportScheduleResponse 
+     * @return ManageReportScheduleResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:ManageReportScheduleResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_ManageReportScheduleResponse(($response->item(0))); 
+            return new ManageReportScheduleResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_ManageReportScheduleResponse from provided XML. 
+            throw new Exception ("Unable to construct ManageReportScheduleResponse from provided XML. 
                                   Make sure that ManageReportScheduleResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResponse extends Marketpla
      * Sets the value of the ManageReportScheduleResult  and returns this instance
      * 
      * @param ManageReportScheduleResult $value ManageReportScheduleResult
-     * @return MarketplaceWebService_Model_ManageReportScheduleResponse instance
+     * @return ManageReportScheduleResponse instance
      */
     public function withManageReportScheduleResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResponse extends Marketpla
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_ManageReportScheduleResponse instance
+     * @return ManageReportScheduleResponse instance
      */
     public function withResponseMetadata($value)
     {

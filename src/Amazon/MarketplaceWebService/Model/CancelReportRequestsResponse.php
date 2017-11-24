@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_CancelReportRequestsResponse
+ * CancelReportRequestsResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>CancelReportRequestsResult: MarketplaceWebService_Model_CancelReportRequestsResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>CancelReportRequestsResult: CancelReportRequestsResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_CancelReportRequestsResponse extends MarketplaceWebService_Model
+class CancelReportRequestsResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_CancelReportRequestsResponse
+     * Construct new CancelReportRequestsResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>CancelReportRequestsResult: MarketplaceWebService_Model_CancelReportRequestsResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>CancelReportRequestsResult: CancelReportRequestsResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'CancelReportRequestsResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_CancelReportRequestsResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'CancelReportRequestsResult' => array('FieldValue' => null, 'FieldType' => 'CancelReportRequestsResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_CancelReportRequestsResponse from XML string
+     * Construct CancelReportRequestsResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_CancelReportRequestsResponse 
+     * @return CancelReportRequestsResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:CancelReportRequestsResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_CancelReportRequestsResponse(($response->item(0))); 
+            return new CancelReportRequestsResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_CancelReportRequestsResponse from provided XML. 
+            throw new Exception ("Unable to construct CancelReportRequestsResponse from provided XML. 
                                   Make sure that CancelReportRequestsResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_CancelReportRequestsResponse extends Marketpla
      * Sets the value of the CancelReportRequestsResult  and returns this instance
      * 
      * @param CancelReportRequestsResult $value CancelReportRequestsResult
-     * @return MarketplaceWebService_Model_CancelReportRequestsResponse instance
+     * @return CancelReportRequestsResponse instance
      */
     public function withCancelReportRequestsResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_CancelReportRequestsResponse extends Marketpla
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_CancelReportRequestsResponse instance
+     * @return CancelReportRequestsResponse instance
      */
     public function withResponseMetadata($value)
     {

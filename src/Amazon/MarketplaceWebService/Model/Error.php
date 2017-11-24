@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('/mnt/disk1/wwwroot/www.glitzcloud.com/protected/extensions/OutService/library/Amazon/MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
-    
+
 
 /**
- * MarketplaceWebService_Model_Error
+ * Error
  * 
  * Properties:
  * <ul>
@@ -32,16 +33,16 @@ require_once ('/mnt/disk1/wwwroot/www.glitzcloud.com/protected/extensions/OutSer
  * <li>Type: string</li>
  * <li>Code: string</li>
  * <li>Message: string</li>
- * <li>Detail: MarketplaceWebService_Model_Object</li>
+ * <li>Detail: Object</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
+class Error extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_Error
+     * Construct new Error
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -51,7 +52,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * <li>Type: string</li>
      * <li>Code: string</li>
      * <li>Message: string</li>
-     * <li>Detail: MarketplaceWebService_Model_Object</li>
+     * <li>Detail: Object</li>
      *
      * </ul>
      */
@@ -80,7 +81,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Type property.
      * 
      * @param string Type
-     * @return this instance
+     * @return $this
      */
     public function setType($value) 
     {
@@ -92,7 +93,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Type and returns this instance
      * 
      * @param string $value Type
-     * @return MarketplaceWebService_Model_Error instance
+     * @return Error instance
      */
     public function withType($value)
     {
@@ -125,7 +126,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Code property.
      * 
      * @param string Code
-     * @return this instance
+     * @return $this
      */
     public function setCode($value) 
     {
@@ -137,7 +138,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Code and returns this instance
      * 
      * @param string $value Code
-     * @return MarketplaceWebService_Model_Error instance
+     * @return Error instance
      */
     public function withCode($value)
     {
@@ -170,7 +171,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Message property.
      * 
      * @param string Message
-     * @return this instance
+     * @return $this
      */
     public function setMessage($value) 
     {
@@ -182,7 +183,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Message and returns this instance
      * 
      * @param string $value Message
-     * @return MarketplaceWebService_Model_Error instance
+     * @return Error instance
      */
     public function withMessage($value)
     {
@@ -227,7 +228,7 @@ class MarketplaceWebService_Model_Error extends MarketplaceWebService_Model
      * Sets the value of the Detail  and returns this instance
      * 
      * @param Object $value Detail
-     * @return MarketplaceWebService_Model_Error instance
+     * @return Error instance
      */
     public function withDetail($value)
     {

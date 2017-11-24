@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportListResponse
+ * GetReportListResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>GetReportListResult: MarketplaceWebService_Model_GetReportListResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>GetReportListResult: GetReportListResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportListResponse extends MarketplaceWebService_Model
+class GetReportListResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportListResponse
+     * Construct new GetReportListResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>GetReportListResult: MarketplaceWebService_Model_GetReportListResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>GetReportListResult: GetReportListResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportListResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_GetReportListResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'GetReportListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportListResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_GetReportListResponse from XML string
+     * Construct GetReportListResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_GetReportListResponse 
+     * @return GetReportListResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:GetReportListResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_GetReportListResponse(($response->item(0))); 
+            return new GetReportListResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_GetReportListResponse from provided XML. 
+            throw new Exception ("Unable to construct GetReportListResponse from provided XML. 
                                   Make sure that GetReportListResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_GetReportListResponse extends MarketplaceWebSe
      * Sets the value of the GetReportListResult  and returns this instance
      * 
      * @param GetReportListResult $value GetReportListResult
-     * @return MarketplaceWebService_Model_GetReportListResponse instance
+     * @return GetReportListResponse instance
      */
     public function withGetReportListResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_GetReportListResponse extends MarketplaceWebSe
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_GetReportListResponse instance
+     * @return GetReportListResponse instance
      */
     public function withResponseMetadata($value)
     {

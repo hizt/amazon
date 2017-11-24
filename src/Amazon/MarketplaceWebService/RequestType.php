@@ -6,6 +6,8 @@
  *      matching the request type.
  *   3. 'Regular' POST requests. This represents the multitude of MWS requests.
  */
+
+namespace Amazon\MarketplaceWebService;
 final class RequestType {
   const POST_UPLOAD = 'POST_UPLOAD';
   const POST_DOWNLOAD = 'POST_DOWNLOAD';

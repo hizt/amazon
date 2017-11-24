@@ -19,12 +19,13 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_GetReportRequest
+ * GetReportRequest
  * 
  * Properties:
  * <ul>
@@ -35,12 +36,12 @@ require_once ('MarketplaceWebService/Model.php');
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService_Model
+class GetReportRequest extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_GetReportRequest
+     * Construct new GetReportRequest
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
@@ -79,7 +80,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the Marketplace property.
      * 
      * @param string Marketplace
-     * @return this instance
+     * @return $this
      */
     public function setMarketplace($value) 
     {
@@ -91,7 +92,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the Marketplace and returns this instance
      * 
      * @param string $value Marketplace
-     * @return MarketplaceWebService_Model_GetReportRequest instance
+     * @return GetReportRequest instance
      */
     public function withMarketplace($value)
     {
@@ -124,7 +125,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the Merchant property.
      * 
      * @param string Merchant
-     * @return this instance
+     * @return $this
      */
     public function setMerchant($value) 
     {
@@ -136,7 +137,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the Merchant and returns this instance
      * 
      * @param string $value Merchant
-     * @return MarketplaceWebService_Model_GetReportRequest instance
+     * @return GetReportRequest instance
      */
     public function withMerchant($value)
     {
@@ -169,7 +170,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the MWSAuthToken property.
      *
      * @param string MWSAuthToken
-     * @return this instance
+     * @return $this
      */
     public function setMWSAuthToken($value)
     {
@@ -181,7 +182,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the MWSAuthToken and returns this instance
      *
      * @param string $value MWSAuthToken
-     * @return MarketplaceWebService_Model_GetReportRequest instance
+     * @return GetReportRequest instance
      */
     public function withMWSAuthToken($value)
     {
@@ -214,7 +215,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the ReportId property.
      * 
      * @param string ReportId
-     * @return this instance
+     * @return $this
      */
     public function setReportId($value) 
     {
@@ -226,7 +227,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the ReportId and returns this instance
      * 
      * @param string $value ReportId
-     * @return MarketplaceWebService_Model_GetReportRequest instance
+     * @return GetReportRequest instance
      */
     public function withReportId($value)
     {
@@ -261,7 +262,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the Report property.
      * 
      * @param string Report
-     * @return this instance
+     * @return $this
      */
     public function setReport($value) 
     {
@@ -273,7 +274,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
      * Sets the value of the Report and returns this instance
      * 
      * @param string $value Report
-     * @return MarketplaceWebService_Model_GetReportRequest instance
+     * @return GetReportRequest instance
      */
     public function withReport($value)
     {

@@ -19,65 +19,66 @@
 /**
  *  @see MarketplaceWebService_Model
  */
-require_once ('MarketplaceWebService/Model.php');  
+namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Model;
 
     
 
 /**
- * MarketplaceWebService_Model_CancelFeedSubmissionsResponse
+ * CancelFeedSubmissionsResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>CancelFeedSubmissionsResult: MarketplaceWebService_Model_CancelFeedSubmissionsResult</li>
- * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+ * <li>CancelFeedSubmissionsResult: CancelFeedSubmissionsResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
  *
  * </ul>
  */ 
-class MarketplaceWebService_Model_CancelFeedSubmissionsResponse extends MarketplaceWebService_Model
+class CancelFeedSubmissionsResponse extends Model
 {
 
 
     /**
-     * Construct new MarketplaceWebService_Model_CancelFeedSubmissionsResponse
+     * Construct new CancelFeedSubmissionsResponse
      * 
      * @param mixed $data DOMElement or Associative Array to construct from. 
      * 
      * Valid properties:
      * <ul>
      * 
-     * <li>CancelFeedSubmissionsResult: MarketplaceWebService_Model_CancelFeedSubmissionsResult</li>
-     * <li>ResponseMetadata: MarketplaceWebService_Model_ResponseMetadata</li>
+     * <li>CancelFeedSubmissionsResult: CancelFeedSubmissionsResult</li>
+     * <li>ResponseMetadata: ResponseMetadata</li>
      *
      * </ul>
      */
     public function __construct($data = null)
     {
         $this->fields = array (
-        'CancelFeedSubmissionsResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_CancelFeedSubmissionsResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_ResponseMetadata'),
+        'CancelFeedSubmissionsResult' => array('FieldValue' => null, 'FieldType' => 'CancelFeedSubmissionsResult'),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
         );
         parent::__construct($data);
     }
 
        
     /**
-     * Construct MarketplaceWebService_Model_CancelFeedSubmissionsResponse from XML string
+     * Construct CancelFeedSubmissionsResponse from XML string
      * 
      * @param string $xml XML string to construct from
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsResponse 
+     * @return CancelFeedSubmissionsResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
     	$xpath->registerNamespace('a', 'http://mws.amazonaws.com/doc/2009-01-01/');
         $response = $xpath->query('//a:CancelFeedSubmissionsResponse');
         if ($response->length == 1) {
-            return new MarketplaceWebService_Model_CancelFeedSubmissionsResponse(($response->item(0))); 
+            return new CancelFeedSubmissionsResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebService_Model_CancelFeedSubmissionsResponse from provided XML. 
+            throw new Exception ("Unable to construct CancelFeedSubmissionsResponse from provided XML. 
                                   Make sure that CancelFeedSubmissionsResponse is a root element");
         }
           
@@ -109,7 +110,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsResponse extends Marketpl
      * Sets the value of the CancelFeedSubmissionsResult  and returns this instance
      * 
      * @param CancelFeedSubmissionsResult $value CancelFeedSubmissionsResult
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsResponse instance
+     * @return CancelFeedSubmissionsResponse instance
      */
     public function withCancelFeedSubmissionsResult($value)
     {
@@ -155,7 +156,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsResponse extends Marketpl
      * Sets the value of the ResponseMetadata  and returns this instance
      * 
      * @param ResponseMetadata $value ResponseMetadata
-     * @return MarketplaceWebService_Model_CancelFeedSubmissionsResponse instance
+     * @return CancelFeedSubmissionsResponse instance
      */
     public function withResponseMetadata($value)
     {
