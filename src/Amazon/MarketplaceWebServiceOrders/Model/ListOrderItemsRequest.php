@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ListOrderItemsRequest
+ * ListOrderItemsRequest
  * 
  * Properties:
  * <ul>
@@ -37,7 +38,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ListOrderItemsRequest extends MarketplaceWebServiceOrders_Model {
+ class ListOrderItemsRequest extends Model {
 
     public function __construct($data = null)
     {
@@ -63,7 +64,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the SellerId property.
      *
      * @param string sellerId
-     * @return this instance
+     * @return $this
      */
     public function setSellerId($value)
     {
@@ -87,7 +88,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param sellerId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withSellerId($value)
     {
@@ -109,7 +110,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the MWSAuthToken property.
      *
      * @param string mwsAuthToken
-     * @return this instance
+     * @return $this
      */
     public function setMWSAuthToken($value)
     {
@@ -133,7 +134,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param mwsAuthToken
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withMWSAuthToken($value)
     {
@@ -155,7 +156,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the AmazonOrderId property.
      *
      * @param string amazonOrderId
-     * @return this instance
+     * @return $this
      */
     public function setAmazonOrderId($value)
     {
@@ -179,7 +180,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param amazonOrderId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withAmazonOrderId($value)
     {

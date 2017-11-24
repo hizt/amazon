@@ -17,7 +17,8 @@
  * Generated: Fri Sep 25 20:06:28 GMT 2015
  */
 
-class MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata {
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+class ResponseHeaderMetadata {
 
   const REQUEST_ID = 'x-mws-request-id';
   const RESPONSE_CONTEXT = 'x-mws-response-context';

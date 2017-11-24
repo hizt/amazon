@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_OrderItem
+ * OrderItem
  * 
  * Properties:
  * <ul>
@@ -36,33 +37,33 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * <li>Title: string</li>
  * <li>QuantityOrdered: int</li>
  * <li>QuantityShipped: int</li>
- * <li>PointsGranted: MarketplaceWebServiceOrders_Model_PointsGrantedDetail</li>
- * <li>ItemPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>GiftWrapPrice: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ItemTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>GiftWrapTax: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>ShippingDiscount: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>PromotionDiscount: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>PointsGranted: PointsGrantedDetail</li>
+ * <li>ItemPrice: Money</li>
+ * <li>ShippingPrice: Money</li>
+ * <li>GiftWrapPrice: Money</li>
+ * <li>ItemTax: Money</li>
+ * <li>ShippingTax: Money</li>
+ * <li>GiftWrapTax: Money</li>
+ * <li>ShippingDiscount: Money</li>
+ * <li>PromotionDiscount: Money</li>
  * <li>PromotionIds: array</li>
- * <li>CODFee: MarketplaceWebServiceOrders_Model_Money</li>
- * <li>CODFeeDiscount: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>CODFee: Money</li>
+ * <li>CODFeeDiscount: Money</li>
  * <li>GiftMessageText: string</li>
  * <li>GiftWrapLevel: string</li>
- * <li>InvoiceData: MarketplaceWebServiceOrders_Model_InvoiceData</li>
+ * <li>InvoiceData: InvoiceData</li>
  * <li>ConditionNote: string</li>
  * <li>ConditionId: string</li>
  * <li>ConditionSubtypeId: string</li>
  * <li>ScheduledDeliveryStartDate: string</li>
  * <li>ScheduledDeliveryEndDate: string</li>
  * <li>PriceDesignation: string</li>
- * <li>BuyerCustomizedInfo: MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail</li>
+ * <li>BuyerCustomizedInfo: BuyerCustomizedInfoDetail</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_OrderItem extends MarketplaceWebServiceOrders_Model {
+ class OrderItem extends Model {
 
     public function __construct($data = null)
     {
@@ -73,28 +74,28 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'Title' => array('FieldValue' => null, 'FieldType' => 'string'),
     'QuantityOrdered' => array('FieldValue' => null, 'FieldType' => 'int'),
     'QuantityShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PointsGranted' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_PointsGrantedDetail'),
-    'ItemPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'GiftWrapPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ItemTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'GiftWrapTax' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'ShippingDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'PromotionDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'PointsGranted' => array('FieldValue' => null, 'FieldType' => 'PointsGrantedDetail'),
+    'ItemPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'ShippingPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'GiftWrapPrice' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'ItemTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'ShippingTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'GiftWrapTax' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'ShippingDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'PromotionDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
     'PromotionIds' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'PromotionId'),
-    'CODFee' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'CODFeeDiscount' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'CODFee' => array('FieldValue' => null, 'FieldType' => 'Money'),
+    'CODFeeDiscount' => array('FieldValue' => null, 'FieldType' => 'Money'),
     'GiftMessageText' => array('FieldValue' => null, 'FieldType' => 'string'),
     'GiftWrapLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InvoiceData' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_InvoiceData'),
+    'InvoiceData' => array('FieldValue' => null, 'FieldType' => 'InvoiceData'),
     'ConditionNote' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ConditionId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ConditionSubtypeId' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ScheduledDeliveryStartDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'ScheduledDeliveryEndDate' => array('FieldValue' => null, 'FieldType' => 'string'),
     'PriceDesignation' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerCustomizedInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail'),
+    'BuyerCustomizedInfo' => array('FieldValue' => null, 'FieldType' => 'BuyerCustomizedInfoDetail'),
     );
     parent::__construct($data);
     }
@@ -113,7 +114,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ASIN property.
      *
      * @param string asin
-     * @return this instance
+     * @return $this
      */
     public function setASIN($value)
     {
@@ -137,7 +138,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param asin
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withASIN($value)
     {
@@ -159,7 +160,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the SellerSKU property.
      *
      * @param string sellerSKU
-     * @return this instance
+     * @return $this
      */
     public function setSellerSKU($value)
     {
@@ -183,7 +184,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param sellerSKU
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withSellerSKU($value)
     {
@@ -205,7 +206,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the OrderItemId property.
      *
      * @param string orderItemId
-     * @return this instance
+     * @return $this
      */
     public function setOrderItemId($value)
     {
@@ -229,7 +230,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param orderItemId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withOrderItemId($value)
     {
@@ -251,7 +252,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Title property.
      *
      * @param string title
-     * @return this instance
+     * @return $this
      */
     public function setTitle($value)
     {
@@ -275,7 +276,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param title
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withTitle($value)
     {
@@ -297,7 +298,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the QuantityOrdered property.
      *
      * @param int quantityOrdered
-     * @return this instance
+     * @return $this
      */
     public function setQuantityOrdered($value)
     {
@@ -321,7 +322,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param quantityOrdered
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withQuantityOrdered($value)
     {
@@ -343,7 +344,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the QuantityShipped property.
      *
      * @param int quantityShipped
-     * @return this instance
+     * @return $this
      */
     public function setQuantityShipped($value)
     {
@@ -367,7 +368,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param quantityShipped
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withQuantityShipped($value)
     {
@@ -388,8 +389,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PointsGranted property.
      *
-     * @param MarketplaceWebServiceOrders_Model_PointsGrantedDetail pointsGranted
-     * @return this instance
+     * @param PointsGrantedDetail pointsGranted
+     * @return $this
      */
     public function setPointsGranted($value)
     {
@@ -413,7 +414,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param pointsGranted
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withPointsGranted($value)
     {
@@ -434,8 +435,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ItemPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money itemPrice
-     * @return this instance
+     * @param Money itemPrice
+     * @return $this
      */
     public function setItemPrice($value)
     {
@@ -459,7 +460,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param itemPrice
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withItemPrice($value)
     {
@@ -480,8 +481,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingPrice
-     * @return this instance
+     * @param Money shippingPrice
+     * @return $this
      */
     public function setShippingPrice($value)
     {
@@ -505,7 +506,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param shippingPrice
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withShippingPrice($value)
     {
@@ -526,8 +527,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GiftWrapPrice property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money giftWrapPrice
-     * @return this instance
+     * @param Money giftWrapPrice
+     * @return $this
      */
     public function setGiftWrapPrice($value)
     {
@@ -551,7 +552,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param giftWrapPrice
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withGiftWrapPrice($value)
     {
@@ -572,8 +573,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ItemTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money itemTax
-     * @return this instance
+     * @param Money itemTax
+     * @return $this
      */
     public function setItemTax($value)
     {
@@ -597,7 +598,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param itemTax
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withItemTax($value)
     {
@@ -618,8 +619,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingTax
-     * @return this instance
+     * @param Money shippingTax
+     * @return $this
      */
     public function setShippingTax($value)
     {
@@ -643,7 +644,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param shippingTax
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withShippingTax($value)
     {
@@ -664,8 +665,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the GiftWrapTax property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money giftWrapTax
-     * @return this instance
+     * @param Money giftWrapTax
+     * @return $this
      */
     public function setGiftWrapTax($value)
     {
@@ -689,7 +690,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param giftWrapTax
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withGiftWrapTax($value)
     {
@@ -710,8 +711,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ShippingDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money shippingDiscount
-     * @return this instance
+     * @param Money shippingDiscount
+     * @return $this
      */
     public function setShippingDiscount($value)
     {
@@ -735,7 +736,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param shippingDiscount
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withShippingDiscount($value)
     {
@@ -756,8 +757,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PromotionDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money promotionDiscount
-     * @return this instance
+     * @param Money promotionDiscount
+     * @return $this
      */
     public function setPromotionDiscount($value)
     {
@@ -781,7 +782,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param promotionDiscount
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withPromotionDiscount($value)
     {
@@ -807,7 +808,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PromotionIds property.
      *
      * @param array promotionIds
-     * @return this instance
+     * @return $this
      */
     public function setPromotionIds($value)
     {
@@ -842,7 +843,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param promotionIds
      *             New values to add.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withPromotionIds()
     {
@@ -866,8 +867,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODFee property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money codFee
-     * @return this instance
+     * @param Money codFee
+     * @return $this
      */
     public function setCODFee($value)
     {
@@ -891,7 +892,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param codFee
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withCODFee($value)
     {
@@ -912,8 +913,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CODFeeDiscount property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money codFeeDiscount
-     * @return this instance
+     * @param Money codFeeDiscount
+     * @return $this
      */
     public function setCODFeeDiscount($value)
     {
@@ -937,7 +938,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param codFeeDiscount
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withCODFeeDiscount($value)
     {
@@ -959,7 +960,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the GiftMessageText property.
      *
      * @param string giftMessageText
-     * @return this instance
+     * @return $this
      */
     public function setGiftMessageText($value)
     {
@@ -983,7 +984,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param giftMessageText
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withGiftMessageText($value)
     {
@@ -1005,7 +1006,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the GiftWrapLevel property.
      *
      * @param string giftWrapLevel
-     * @return this instance
+     * @return $this
      */
     public function setGiftWrapLevel($value)
     {
@@ -1029,7 +1030,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param giftWrapLevel
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withGiftWrapLevel($value)
     {
@@ -1050,8 +1051,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the InvoiceData property.
      *
-     * @param MarketplaceWebServiceOrders_Model_InvoiceData invoiceData
-     * @return this instance
+     * @param InvoiceData invoiceData
+     * @return $this
      */
     public function setInvoiceData($value)
     {
@@ -1075,7 +1076,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param invoiceData
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withInvoiceData($value)
     {
@@ -1097,7 +1098,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ConditionNote property.
      *
      * @param string conditionNote
-     * @return this instance
+     * @return $this
      */
     public function setConditionNote($value)
     {
@@ -1121,7 +1122,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param conditionNote
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withConditionNote($value)
     {
@@ -1143,7 +1144,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ConditionId property.
      *
      * @param string conditionId
-     * @return this instance
+     * @return $this
      */
     public function setConditionId($value)
     {
@@ -1167,7 +1168,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param conditionId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withConditionId($value)
     {
@@ -1189,7 +1190,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ConditionSubtypeId property.
      *
      * @param string conditionSubtypeId
-     * @return this instance
+     * @return $this
      */
     public function setConditionSubtypeId($value)
     {
@@ -1213,7 +1214,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param conditionSubtypeId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withConditionSubtypeId($value)
     {
@@ -1235,7 +1236,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ScheduledDeliveryStartDate property.
      *
      * @param string scheduledDeliveryStartDate
-     * @return this instance
+     * @return $this
      */
     public function setScheduledDeliveryStartDate($value)
     {
@@ -1259,7 +1260,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param scheduledDeliveryStartDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withScheduledDeliveryStartDate($value)
     {
@@ -1281,7 +1282,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ScheduledDeliveryEndDate property.
      *
      * @param string scheduledDeliveryEndDate
-     * @return this instance
+     * @return $this
      */
     public function setScheduledDeliveryEndDate($value)
     {
@@ -1305,7 +1306,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param scheduledDeliveryEndDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withScheduledDeliveryEndDate($value)
     {
@@ -1327,7 +1328,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PriceDesignation property.
      *
      * @param string priceDesignation
-     * @return this instance
+     * @return $this
      */
     public function setPriceDesignation($value)
     {
@@ -1351,7 +1352,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param priceDesignation
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withPriceDesignation($value)
     {
@@ -1372,8 +1373,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BuyerCustomizedInfo property.
      *
-     * @param MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail buyerCustomizedInfo
-     * @return this instance
+     * @param BuyerCustomizedInfoDetail buyerCustomizedInfo
+     * @return $this
      */
     public function setBuyerCustomizedInfo($value)
     {
@@ -1397,7 +1398,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param buyerCustomizedInfo
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withBuyerCustomizedInfo($value)
     {

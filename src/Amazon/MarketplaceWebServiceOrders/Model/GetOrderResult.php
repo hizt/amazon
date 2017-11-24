@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_GetOrderResult
+ * GetOrderResult
  * 
  * Properties:
  * <ul>
@@ -35,12 +36,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_GetOrderResult extends MarketplaceWebServiceOrders_Model {
+ class GetOrderResult extends Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'Orders' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Order'), 'ListMemberName' => 'Order'),
+    'Orders' => array('FieldValue' => array(), 'FieldType' => array('Order'), 'ListMemberName' => 'Order'),
     );
     parent::__construct($data);
     }
@@ -63,7 +64,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Orders property.
      *
      * @param array orders
-     * @return this instance
+     * @return $this
      */
     public function setOrders($value)
     {
@@ -98,7 +99,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param orders
      *             New values to add.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withOrders()
     {

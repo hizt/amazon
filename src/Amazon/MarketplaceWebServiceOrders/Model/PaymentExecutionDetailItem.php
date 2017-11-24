@@ -21,27 +21,28 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem
+ * PaymentExecutionDetailItem
  * 
  * Properties:
  * <ul>
  * 
- * <li>Payment: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>Payment: Money</li>
  * <li>PaymentMethod: string</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem extends MarketplaceWebServiceOrders_Model {
+ class PaymentExecutionDetailItem extends Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'Payment' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'Payment' => array('FieldValue' => null, 'FieldType' => 'Money'),
     'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
@@ -60,8 +61,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Payment property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money payment
-     * @return this instance
+     * @param Money payment
+     * @return $this
      */
     public function setPayment($value)
     {
@@ -85,7 +86,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param payment
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withPayment($value)
     {
@@ -107,7 +108,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PaymentMethod property.
      *
      * @param string paymentMethod
-     * @return this instance
+     * @return $this
      */
     public function setPaymentMethod($value)
     {
@@ -131,7 +132,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param paymentMethod
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withPaymentMethod($value)
     {

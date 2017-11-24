@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_InvoiceData
+ * InvoiceData
  * 
  * Properties:
  * <ul>
@@ -38,7 +39,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServiceOrders_Model {
+ class InvoiceData extends Model {
 
     public function __construct($data = null)
     {
@@ -65,7 +66,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the InvoiceRequirement property.
      *
      * @param string invoiceRequirement
-     * @return this instance
+     * @return $this
      */
     public function setInvoiceRequirement($value)
     {
@@ -89,7 +90,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param invoiceRequirement
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withInvoiceRequirement($value)
     {
@@ -111,7 +112,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the BuyerSelectedInvoiceCategory property.
      *
      * @param string buyerSelectedInvoiceCategory
-     * @return this instance
+     * @return $this
      */
     public function setBuyerSelectedInvoiceCategory($value)
     {
@@ -135,7 +136,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param buyerSelectedInvoiceCategory
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withBuyerSelectedInvoiceCategory($value)
     {
@@ -157,7 +158,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the InvoiceTitle property.
      *
      * @param string invoiceTitle
-     * @return this instance
+     * @return $this
      */
     public function setInvoiceTitle($value)
     {
@@ -181,7 +182,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param invoiceTitle
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withInvoiceTitle($value)
     {
@@ -203,7 +204,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the InvoiceInformation property.
      *
      * @param string invoiceInformation
-     * @return this instance
+     * @return $this
      */
     public function setInvoiceInformation($value)
     {
@@ -227,7 +228,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param invoiceInformation
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withInvoiceInformation($value)
     {

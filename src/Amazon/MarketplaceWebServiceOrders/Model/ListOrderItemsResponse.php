@@ -21,30 +21,31 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ListOrderItemsResponse
+ * ListOrderItemsResponse
  * 
  * Properties:
  * <ul>
  * 
- * <li>ListOrderItemsResult: MarketplaceWebServiceOrders_Model_ListOrderItemsResult</li>
- * <li>ResponseMetadata: MarketplaceWebServiceOrders_Model_ResponseMetadata</li>
- * <li>ResponseHeaderMetadata: MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata</li>
+ * <li>ListOrderItemsResult: ListOrderItemsResult</li>
+ * <li>ResponseMetadata: ResponseMetadata</li>
+ * <li>ResponseHeaderMetadata: ResponseHeaderMetadata</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends MarketplaceWebServiceOrders_Model {
+ class ListOrderItemsResponse extends Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'ListOrderItemsResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ListOrderItemsResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata'),
+    'ListOrderItemsResult' => array('FieldValue' => null, 'FieldType' => 'ListOrderItemsResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseHeaderMetadata'),
     );
     parent::__construct($data);
     }
@@ -62,8 +63,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ListOrderItemsResult property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ListOrderItemsResult listOrderItemsResult
-     * @return this instance
+     * @param ListOrderItemsResult listOrderItemsResult
+     * @return $this
      */
     public function setListOrderItemsResult($value)
     {
@@ -87,7 +88,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param listOrderItemsResult
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withListOrderItemsResult($value)
     {
@@ -108,8 +109,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseMetadata responseMetadata
-     * @return this instance
+     * @param ResponseMetadata responseMetadata
+     * @return $this
      */
     public function setResponseMetadata($value)
     {
@@ -133,7 +134,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param responseMetadata
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withResponseMetadata($value)
     {
@@ -154,8 +155,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata responseHeaderMetadata
-     * @return this instance
+     * @param ResponseHeaderMetadata responseHeaderMetadata
+     * @return $this
      */
     public function setResponseHeaderMetadata($value)
     {
@@ -179,7 +180,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param responseHeaderMetadata
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withResponseHeaderMetadata($value)
     {
@@ -187,23 +188,23 @@ require_once (dirname(__FILE__) . '/../Model.php');
         return $this;
     }
     /**
-     * Construct MarketplaceWebServiceOrders_Model_ListOrderItemsResponse from XML string
+     * Construct ListOrderItemsResponse from XML string
      * 
      * @param $xml
      *        XML string to construct from
      *
-     * @return MarketplaceWebServiceOrders_Model_ListOrderItemsResponse 
+     * @return ListOrderItemsResponse
      */
     public static function fromXML($xml)
     {
-        $dom = new DOMDocument();
+        $dom = new \DOMDocument();
         $dom->loadXML($xml);
-        $xpath = new DOMXPath($dom);
+        $xpath = new \DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListOrderItemsResponse']");
         if ($response->length == 1) {
-            return new MarketplaceWebServiceOrders_Model_ListOrderItemsResponse(($response->item(0))); 
+            return new ListOrderItemsResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceOrders_Model_ListOrderItemsResponse from provided XML. 
+            throw new \Exception ("Unable to construct ListOrderItemsResponse from provided XML. 
                                   Make sure that ListOrderItemsResponse is a root element");
         }
     }

@@ -21,28 +21,29 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_PointsGrantedDetail
+ * PointsGrantedDetail
  * 
  * Properties:
  * <ul>
  * 
  * <li>PointsNumber: int</li>
- * <li>PointsMonetaryValue: MarketplaceWebServiceOrders_Model_Money</li>
+ * <li>PointsMonetaryValue: Money</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_PointsGrantedDetail extends MarketplaceWebServiceOrders_Model {
+ class PointsGrantedDetail extends Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'PointsNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
+    'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'Money'),
     );
     parent::__construct($data);
     }
@@ -61,7 +62,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PointsNumber property.
      *
      * @param int pointsNumber
-     * @return this instance
+     * @return $this
      */
     public function setPointsNumber($value)
     {
@@ -85,7 +86,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param pointsNumber
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withPointsNumber($value)
     {
@@ -106,8 +107,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PointsMonetaryValue property.
      *
-     * @param MarketplaceWebServiceOrders_Model_Money pointsMonetaryValue
-     * @return this instance
+     * @param Money pointsMonetaryValue
+     * @return $this
      */
     public function setPointsMonetaryValue($value)
     {
@@ -131,7 +132,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param pointsMonetaryValue
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withPointsMonetaryValue($value)
     {

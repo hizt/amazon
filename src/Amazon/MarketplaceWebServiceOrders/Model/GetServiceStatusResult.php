@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_GetServiceStatusResult
+ * GetServiceStatusResult
  * 
  * Properties:
  * <ul>
@@ -38,7 +39,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends MarketplaceWebServiceOrders_Model {
+ class GetServiceStatusResult extends Model {
 
     public function __construct($data = null)
     {
@@ -46,7 +47,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
     'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
     'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Messages' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Message'), 'ListMemberName' => 'Message'),
+    'Messages' => array('FieldValue' => array(), 'FieldType' => array('Message'), 'ListMemberName' => 'Message'),
     );
     parent::__construct($data);
     }
@@ -65,7 +66,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Status property.
      *
      * @param string status
-     * @return this instance
+     * @return $this
      */
     public function setStatus($value)
     {
@@ -89,7 +90,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param status
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withStatus($value)
     {
@@ -111,7 +112,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Timestamp property.
      *
      * @param string timestamp
-     * @return this instance
+     * @return $this
      */
     public function setTimestamp($value)
     {
@@ -135,7 +136,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param timestamp
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withTimestamp($value)
     {
@@ -157,7 +158,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the MessageId property.
      *
      * @param string messageId
-     * @return this instance
+     * @return $this
      */
     public function setMessageId($value)
     {
@@ -181,7 +182,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param messageId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withMessageId($value)
     {
@@ -207,7 +208,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Messages property.
      *
      * @param array messages
-     * @return this instance
+     * @return $this
      */
     public function setMessages($value)
     {
@@ -242,7 +243,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param messages
      *             New values to add.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withMessages()
     {

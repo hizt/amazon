@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail
+ * BuyerCustomizedInfoDetail
  * 
  * Properties:
  * <ul>
@@ -35,7 +36,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail extends MarketplaceWebServiceOrders_Model {
+ class BuyerCustomizedInfoDetail extends Model {
 
     public function __construct($data = null)
     {
@@ -59,7 +60,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the CustomizedURL property.
      *
      * @param string customizedURL
-     * @return this instance
+     * @return $this
      */
     public function setCustomizedURL($value)
     {
@@ -83,7 +84,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param customizedURL
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withCustomizedURL($value)
     {

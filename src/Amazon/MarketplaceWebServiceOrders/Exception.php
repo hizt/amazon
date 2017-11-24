@@ -17,13 +17,14 @@
  * Generated: Fri Sep 25 20:06:28 GMT 2015
  */
 
+namespace Amazon\MarketplaceWebServiceOrders;
 
 /**
  * Marketplace Web Service Orders Exception provides details of errors
  * returned by Marketplace Web Service Orders service
  *
  */
-class MarketplaceWebServiceOrders_Exception extends Exception
+class Exception extends \Exception
 
 {
     /** @var string */
@@ -62,7 +63,7 @@ class MarketplaceWebServiceOrders_Exception extends Exception
         parent::__construct($this->_message);
         if (array_key_exists("Exception", $errorInfo)) {
             $exception = $errorInfo["Exception"];
-            if ($exception instanceof MarketplaceWebServiceOrders_Exception) {
+            if ($exception instanceof Exception) {
                 $this->_statusCode = $exception->getStatusCode();
                 $this->_errorCode = $exception->getErrorCode();
                 $this->_errorType = $exception->getErrorType();

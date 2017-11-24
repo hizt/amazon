@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ListOrdersResult
+ * ListOrdersResult
  * 
  * Properties:
  * <ul>
@@ -38,7 +39,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebServiceOrders_Model {
+ class ListOrdersResult extends Model {
 
     public function __construct($data = null)
     {
@@ -46,7 +47,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     'CreatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
     'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Orders' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Order'), 'ListMemberName' => 'Order'),
+    'Orders' => array('FieldValue' => array(), 'FieldType' => array('Order'), 'ListMemberName' => 'Order'),
     );
     parent::__construct($data);
     }
@@ -65,7 +66,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the NextToken property.
      *
      * @param string nextToken
-     * @return this instance
+     * @return $this
      */
     public function setNextToken($value)
     {
@@ -89,7 +90,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param nextToken
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withNextToken($value)
     {
@@ -111,7 +112,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the CreatedBefore property.
      *
      * @param string createdBefore
-     * @return this instance
+     * @return $this
      */
     public function setCreatedBefore($value)
     {
@@ -135,7 +136,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param createdBefore
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withCreatedBefore($value)
     {
@@ -157,7 +158,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the LastUpdatedBefore property.
      *
      * @param string lastUpdatedBefore
-     * @return this instance
+     * @return $this
      */
     public function setLastUpdatedBefore($value)
     {
@@ -181,7 +182,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param lastUpdatedBefore
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withLastUpdatedBefore($value)
     {
@@ -207,7 +208,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Orders property.
      *
      * @param array orders
-     * @return this instance
+     * @return $this
      */
     public function setOrders($value)
     {
@@ -242,7 +243,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param orders
      *             New values to add.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withOrders()
     {

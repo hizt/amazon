@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ResponseMetadata
+ * ResponseMetadata
  * 
  * Properties:
  * <ul>
@@ -35,7 +36,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ResponseMetadata extends MarketplaceWebServiceOrders_Model {
+ class ResponseMetadata extends Model {
 
     public function __construct($data = null)
     {
@@ -59,7 +60,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the RequestId property.
      *
      * @param string requestId
-     * @return this instance
+     * @return $this
      */
     public function setRequestId($value)
     {
@@ -83,7 +84,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param requestId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withRequestId($value)
     {

@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_Message
+ * Message
  * 
  * Properties:
  * <ul>
@@ -36,7 +37,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_Message extends MarketplaceWebServiceOrders_Model {
+ class Message extends Model {
 
     public function __construct($data = null)
     {
@@ -61,7 +62,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Locale property.
      *
      * @param string locale
-     * @return this instance
+     * @return $this
      */
     public function setLocale($value)
     {
@@ -85,7 +86,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param locale
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withLocale($value)
     {
@@ -107,7 +108,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Text property.
      *
      * @param string text
-     * @return this instance
+     * @return $this
      */
     public function setText($value)
     {
@@ -131,7 +132,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param text
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withText($value)
     {

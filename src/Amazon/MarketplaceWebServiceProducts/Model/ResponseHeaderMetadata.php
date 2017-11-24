@@ -17,6 +17,10 @@
  * Generated: Thu Mar 10 07:30:00 PST 2016
  */
 
+
+namespace Amazon\MarketplaceWebServiceProducts\Model;
+use Amazon\MarketplaceWebServiceProducts\Model;
+
 class ResponseHeaderMetadata {
 
   const REQUEST_ID = 'x-mws-request-id';

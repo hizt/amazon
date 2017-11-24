@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ListOrderItemsResult
+ * ListOrderItemsResult
  * 
  * Properties:
  * <ul>
@@ -37,14 +38,14 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends MarketplaceWebServiceOrders_Model {
+ class ListOrderItemsResult extends Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
     'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
     'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_OrderItem'), 'ListMemberName' => 'OrderItem'),
+    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('OrderItem'), 'ListMemberName' => 'OrderItem'),
     );
     parent::__construct($data);
     }
@@ -63,7 +64,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the NextToken property.
      *
      * @param string nextToken
-     * @return this instance
+     * @return $this
      */
     public function setNextToken($value)
     {
@@ -87,7 +88,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param nextToken
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withNextToken($value)
     {
@@ -109,7 +110,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the AmazonOrderId property.
      *
      * @param string amazonOrderId
-     * @return this instance
+     * @return $this
      */
     public function setAmazonOrderId($value)
     {
@@ -133,7 +134,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param amazonOrderId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withAmazonOrderId($value)
     {
@@ -159,7 +160,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the OrderItems property.
      *
      * @param array orderItems
-     * @return this instance
+     * @return $this
      */
     public function setOrderItems($value)
     {
@@ -194,7 +195,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param orderItems
      *             New values to add.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withOrderItems()
     {

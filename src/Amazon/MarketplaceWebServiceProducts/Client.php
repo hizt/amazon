@@ -47,7 +47,7 @@ use Amazon\MarketplaceWebServiceProducts\Model\GetServiceStatusRequest;
 use Amazon\MarketplaceWebServiceProducts\Model\GetServiceStatusResponse;
 use Amazon\MarketplaceWebServiceProducts\Model\ListMatchingProductsRequest;
 use Amazon\MarketplaceWebServiceProducts\Model\ListMatchingProductsResponse;
-use ResponseHeaderMetadata;
+use Amazon\MarketplaceWebServiceProducts\Model\ResponseHeaderMetadata;
 
 
 /**

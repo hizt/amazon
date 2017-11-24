@@ -21,11 +21,12 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+namespace Amazon\MarketplaceWebServiceOrders\Model;
+use Amazon\MarketplaceWebServiceOrders\Model;
 
 
 /**
- * MarketplaceWebServiceOrders_Model_Money
+ * Money
  * 
  * Properties:
  * <ul>
@@ -36,7 +37,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_Money extends MarketplaceWebServiceOrders_Model {
+ class Money extends Model {
 
     public function __construct($data = null)
     {
@@ -61,7 +62,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the CurrencyCode property.
      *
      * @param string currencyCode
-     * @return this instance
+     * @return $this
      */
     public function setCurrencyCode($value)
     {
@@ -85,7 +86,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param currencyCode
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withCurrencyCode($value)
     {
@@ -107,7 +108,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Amount property.
      *
      * @param string amount
-     * @return this instance
+     * @return $this
      */
     public function setAmount($value)
     {
@@ -131,7 +132,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param amount
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this.
      */
     public function withAmount($value)
     {
