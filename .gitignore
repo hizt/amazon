@@ -44,3 +44,7 @@ Temporary Items
 
 # PHPStorm ide create files
 *.idea
+
+composer.lock
+vendor
+Samples
