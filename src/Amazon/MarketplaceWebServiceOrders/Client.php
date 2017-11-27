@@ -102,13 +102,13 @@ class Client implements MarketplaceWebServiceOrdersInterface
     public function getOrder($request)
     {
         if (!($request instanceof GetOrderRequest)) {
-                        $request = new GetOrderRequest($request);
+            $request = new GetOrderRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetOrder';
         $httpResponse = $this->_invoke($parameters);
 
-                $response = GetOrderResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetOrderResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -151,13 +151,13 @@ class Client implements MarketplaceWebServiceOrdersInterface
     public function getServiceStatus($request)
     {
         if (!($request instanceof GetServiceStatusRequest)) {
-                        $request = new GetServiceStatusRequest($request);
+            $request = new GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-                $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
+        $response = GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -197,13 +197,13 @@ class Client implements MarketplaceWebServiceOrdersInterface
     public function listOrderItems($request)
     {
         if (!($request instanceof ListOrderItemsRequest)) {
-                        $request = new ListOrderItemsRequest($request);
+            $request = new ListOrderItemsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrderItems';
         $httpResponse = $this->_invoke($parameters);
 
-                $response = ListOrderItemsResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListOrderItemsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -247,13 +247,13 @@ class Client implements MarketplaceWebServiceOrdersInterface
     public function listOrderItemsByNextToken($request)
     {
         if (!($request instanceof ListOrderItemsByNextTokenRequest)) {
-                        $request = new ListOrderItemsByNextTokenRequest($request);
+            $request = new ListOrderItemsByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrderItemsByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-                $response = ListOrderItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListOrderItemsByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -286,22 +286,21 @@ class Client implements MarketplaceWebServiceOrdersInterface
      * List Orders
      * ListOrders can be used to find orders that meet the specified criteria.
      *
-     * @param mixed $request array of parameters for ListOrders request or ListOrders object itself
-     * @see ListOrdersRequest
+     * @param ListOrdersRequest $request
      * @return ListOrdersResponse
-     *
-     * @throws Exception
+     * @throws \Exception
+     * @see ListOrdersRequest
      */
     public function listOrders($request)
     {
         if (!($request instanceof ListOrdersRequest)) {
-                        $request = new ListOrdersRequest($request);
+            $request = new ListOrdersRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrders';
         try {
             $httpResponse = $this->_invoke($parameters);
-                        $response = ListOrdersResponse::fromXML($httpResponse['ResponseBody']);
+            $response = ListOrdersResponse::fromXML($httpResponse['ResponseBody']);
             $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
             return $response;
         } catch (\Exception $e) {
@@ -382,13 +381,13 @@ class Client implements MarketplaceWebServiceOrdersInterface
     public function listOrdersByNextToken($request)
     {
         if (!($request instanceof ListOrdersByNextTokenRequest)) {
-                        $request = new ListOrdersByNextTokenRequest($request);
+            $request = new ListOrdersByNextTokenRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListOrdersByNextToken';
         $httpResponse = $this->_invoke($parameters);
 
-                $response = ListOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
+        $response = ListOrdersByNextTokenResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
@@ -816,7 +815,7 @@ class Client implements MarketplaceWebServiceOrdersInterface
             }
         }
 
-                return new ResponseHeaderMetadata(
+        return new ResponseHeaderMetadata(
             $headers['x-mws-request-id'],
             $headers['x-mws-response-context'],
             $headers['x-mws-timestamp'],

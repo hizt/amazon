@@ -105,6 +105,7 @@ abstract class Model
      */
     private function _fromDOMElement(DOMElement $dom)
     {
+
         $xpath = new DOMXPath($dom->ownerDocument);
 
         foreach ($this->_fields as $fieldName => $field) {
@@ -117,16 +118,15 @@ abstract class Model
                     }
                 } else if ($this->_isComplexType($fieldType[0])) {
                     if (isset($field['ListMemberName'])) {
-                       $memberName = $field['ListMemberName'];
-                       $elements = $xpath->query("./*[local-name()='$fieldName']/*[local-name()='$memberName']", $dom);
+                        $memberName = $field['ListMemberName'];
+                        $elements = $xpath->query("./*[local-name()='$fieldName']/*[local-name()='$memberName']", $dom);
                     } else {
-                       $elements = $xpath->query("./*[local-name()='$fieldName']", $dom);
+                        $elements = $xpath->query("./*[local-name()='$fieldName']", $dom);
                     }
                     if ($elements->length >= 1) {
-                        //TODO
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
                         foreach ($elements as $element) {
-                            $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
+                            $className = $this->getFullModelName($fieldType[0]);
+                            $this->_fields[$fieldName]['FieldValue'][] = new $className($element);
                         }
                     }
                 } else {
@@ -147,9 +147,8 @@ abstract class Model
                 if ($this->_isComplexType($fieldType)) {
                     $elements = $xpath->query("./*[local-name()='$fieldName']", $dom);
                     if ($elements->length == 1) {
-                        //TODO
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
-                        $this->_fields[$fieldName]['FieldValue'] = new $fieldType($elements->item(0));
+                        $className = $this->getFullModelName($fieldType);
+                        $this->_fields[$fieldName]['FieldValue'] = new $className($elements->item(0));
                     }
                 } else {
                     if($fieldType[0] == "@") {
@@ -162,7 +161,11 @@ abstract class Model
                             }
                         }
                     } else {
-                        $element = $xpath->query("./*[local-name()='$fieldName']/text()", $dom);
+                        if ($fieldType[0] == ".") {
+                            $element = $xpath->query("./text()", $dom);
+                        } else {
+                            $element = $xpath->query("./*[local-name()='$fieldName']/text()", $dom);
+                        }
                         if ($element->length == 1) {
                             $this->_fields[$fieldName]['FieldValue'] = $element->item(0)->data;
                         }
@@ -170,11 +173,11 @@ abstract class Model
 
                     $attribute = $xpath->query("./@$fieldName", $dom);
                     if ($attribute->length == 1) {
-                      $this->_fields[$fieldName]['FieldValue'] = $attribute->item(0)->nodeValue;
-                      if (isset ($this->_fields['Value'])) {
-                        $parentNode = $attribute->item(0)->parentNode;
-                        $this->_fields['Value']['FieldValue'] = $parentNode->nodeValue;
-                      }
+                        $this->_fields[$fieldName]['FieldValue'] = $attribute->item(0)->nodeValue;
+                        if (isset ($this->_fields['Value'])) {
+                            $parentNode = $attribute->item(0)->parentNode;
+                            $this->_fields['Value']['FieldValue'] = $parentNode->nodeValue;
+                        }
                     }
 
                 }
@@ -201,11 +204,9 @@ abstract class Model
                             $elements =  array($elements);
                         }
                         if (count ($elements) >= 1) {
-                            //TODO
-                            require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
-
+                            $className = $this->getFullModelName($fieldType[0]);
                             foreach ($elements as $element) {
-                                $this->_fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
+                                $this->_fields[$fieldName]['FieldValue'][] = new $className($element);
                             }
                         }
                     }
@@ -225,9 +226,8 @@ abstract class Model
             } else {
                  if ($this->_isComplexType($fieldType)) {
                     if (array_key_exists($fieldName, $array)) {
-                        //TODO
-                        require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
-                        $this->_fields[$fieldName]['FieldValue'] = new $fieldType($array[$fieldName]);
+                        $className = $this->getFullModelName($fieldType);
+                        $this->_fields[$fieldName]['FieldValue'] = new $className($array[$fieldName]);
                     }
                  } else {
                     if (array_key_exists($fieldName, $array)) {
@@ -304,7 +304,7 @@ abstract class Model
         $xml = "";
         foreach ($this->_fields as $fieldName => $field) {
             $fieldValue = $field['FieldValue'];
-            if (!is_null($fieldValue) && $field['FieldType'] != "MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata") {
+            if (!is_null($fieldValue) && $field['FieldType'] != "ResponseHeaderMetadata") {
                 $fieldType = $field['FieldType'];
                 if (is_array($fieldType)) {
                     if ($fieldType[0] == "object") {
@@ -403,7 +403,13 @@ abstract class Model
      */
     private function _isComplexType ($fieldType)
     {
-        return preg_match("/^MarketplaceWebServiceOrders_/", $fieldType);
+        return class_exists(self::getFullModelName($fieldType));
+
+        //return preg_match("/^MarketplaceWebServiceOrders_/", $fieldType);
+    }
+
+    private function getFullModelName($model){
+        return '\\Amazon\\MarketplaceWebServiceOrders\\Model\\'.$model;
     }
 
    /**
