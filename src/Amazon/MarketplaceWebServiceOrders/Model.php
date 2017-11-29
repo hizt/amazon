@@ -30,7 +30,7 @@ abstract class Model
 {
 
     /** @var array */
-    protected $_fields = array ();
+    public $_fields = array ();
 
     /**
      * Construct new model class
@@ -49,6 +49,8 @@ abstract class Model
             }
         }
     }
+
+
 
     /**
      * Support for virtual properties getters.

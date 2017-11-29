@@ -193,7 +193,7 @@ use Amazon\MarketplaceWebServiceOrders\Model;
     /**
      * Get the value of the Orders property.
      *
-     * @return List<Order> Orders.
+     * @return [] Order
      */
     public function getOrders()
     {

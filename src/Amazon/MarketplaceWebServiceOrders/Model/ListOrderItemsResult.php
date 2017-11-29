@@ -145,7 +145,7 @@ use Amazon\MarketplaceWebServiceOrders\Model;
     /**
      * Get the value of the OrderItems property.
      *
-     * @return List<OrderItem> OrderItems.
+     * @return array OrderItem OrderItems.
      */
     public function getOrderItems()
     {
