@@ -17,12 +17,12 @@
  * Generated: Wed May 04 17:14:15 UTC 2016
  */
 
-namespace inventory\model;
+namespace Amazon\inventory\model;
 /**
  *  @see FBAInventoryServiceMWS_Model
  */
 
-use inventory\Model;
+use Amazon\inventory\Model;
 
 
 /**

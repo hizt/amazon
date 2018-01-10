@@ -16,10 +16,10 @@
  * Library Version: 2014-09-30
  * Generated: Wed May 04 17:14:15 UTC 2016
  */
-namespace inventory\model;
+namespace Amazon\inventory\model;
 
 
-use inventory\Model;
+use Amazon\inventory\Model;
 
 /**
  * FBAInventoryServiceMWS_Model_GetServiceStatusResponse

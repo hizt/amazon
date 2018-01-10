@@ -17,7 +17,7 @@
  * Generated: Wed May 04 17:14:15 UTC 2016
  */
 
-namespace inventory;
+namespace Amazon\inventory;
 
 
 use inventory\model\GetServiceStatusResponse;
