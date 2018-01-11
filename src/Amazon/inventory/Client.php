@@ -17,13 +17,13 @@
  * Generated: Wed May 04 17:14:15 UTC 2016
  */
 namespace Amazon\inventory;
-use inventory\model\GetServiceStatusRequest;
-use inventory\model\GetServiceStatusResponse;
-use inventory\model\ListInventorySupplyByNextTokenRequest;
-use inventory\model\ListInventorySupplyByNextTokenResponse;
-use inventory\model\ListInventorySupplyRequest;
-use inventory\model\ListInventorySupplyResponse;
-use inventory\model\ResponseHeaderMetadata;
+use Amazon\inventory\model\GetServiceStatusRequest;
+use Amazon\inventory\model\GetServiceStatusResponse;
+use Amazon\inventory\model\ListInventorySupplyByNextTokenRequest;
+use Amazon\inventory\model\ListInventorySupplyByNextTokenResponse;
+use Amazon\inventory\model\ListInventorySupplyRequest;
+use Amazon\inventory\model\ListInventorySupplyResponse;
+use Amazon\inventory\model\ResponseHeaderMetadata;
 
 /**
  * FBAInventoryServiceMWS_Client is an implementation of FBAInventoryServiceMWS
@@ -269,9 +269,13 @@ class Client implements InventoryServiceInterface
     public function __construct(
     $awsAccessKeyId, $awsSecretAccessKey, $config, $applicationName, $applicationVersion, $attributes = null)
     {
-        iconv_set_encoding('output_encoding', 'UTF-8');
-        iconv_set_encoding('input_encoding', 'UTF-8');
-        iconv_set_encoding('internal_encoding', 'UTF-8');
+        if (PHP_VERSION_ID < 50600) {
+            iconv_set_encoding('input_encoding', 'UTF-8');
+            iconv_set_encoding('output_encoding', 'UTF-8');
+            iconv_set_encoding('internal_encoding', 'UTF-8');
+        } else {
+            ini_set('default_charset', 'UTF-8');
+        }
 
         $this->_awsAccessKeyId = $awsAccessKeyId;
         $this->_awsSecretAccessKey = $awsSecretAccessKey;

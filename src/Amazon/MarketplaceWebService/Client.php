@@ -133,11 +133,15 @@ class Client implements MarketplaceWebServiceInterface
    */
   public function __construct(
   $awsAccessKeyId, $awsSecretAccessKey, $config, $applicationName, $applicationVersion, $attributes = null) {
-	iconv_set_encoding('output_encoding', 'UTF-8');
-    iconv_set_encoding('input_encoding', 'UTF-8');
-    iconv_set_encoding('internal_encoding', 'UTF-8');
+      if (PHP_VERSION_ID < 50600) {
+          iconv_set_encoding('input_encoding', 'UTF-8');
+          iconv_set_encoding('output_encoding', 'UTF-8');
+          iconv_set_encoding('internal_encoding', 'UTF-8');
+      } else {
+          ini_set('default_charset', 'UTF-8');
+      }
 
-    $this->awsAccessKeyId = $awsAccessKeyId;
+      $this->awsAccessKeyId = $awsAccessKeyId;
     $this->awsSecretAccessKey = $awsSecretAccessKey;
     if (!is_null($config)) 
       $this->config = array_merge($this->config, $config);
