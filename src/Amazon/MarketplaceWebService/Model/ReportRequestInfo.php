@@ -69,14 +69,14 @@ class ReportRequestInfo extends Model
         $this->fields = array (
         'ReportRequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'StartDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'EndDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+        'StartDate' => array('FieldValue' => null, 'FieldType' => 'string'),
+        'EndDate' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Scheduled' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'SubmittedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+        'SubmittedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportProcessingStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
         'GeneratedReportId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'StartedProcessingDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
-        'CompletedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+        'StartedProcessingDate' => array('FieldValue' => null, 'FieldType' => 'string'),
+        'CompletedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }

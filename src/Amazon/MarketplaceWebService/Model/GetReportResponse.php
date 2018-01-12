@@ -55,8 +55,8 @@ class GetReportResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportResult' => array('FieldValue' => null, 'FieldType' => 'GetReportResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+        'GetReportResult' => array('FieldValue' => null, 'FieldType' => GetReportResult::className()),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => ResponseMetadata::className()),
         );
         parent::__construct($data);
     }

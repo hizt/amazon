@@ -59,7 +59,7 @@ class GetReportRequestListResult extends Model
         $this->fields = array (
         'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
         'HasNext' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array('ReportRequestInfo')),
+        'ReportRequestInfo' => array('FieldValue' => array(), 'FieldType' => array(ReportRequestInfo::className())),
         );
         parent::__construct($data);
     }

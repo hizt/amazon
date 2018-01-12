@@ -827,7 +827,6 @@ class Client implements MarketplaceWebServiceInterface
       do {
         try {
           $response = $this->performRequest($actionName, $converted, $dataHandle, $contentMd5);
-          
           $httpStatus = $response['Status'];
           
           switch ($httpStatus) {
@@ -1017,7 +1016,6 @@ class Client implements MarketplaceWebServiceInterface
    */
   private function responseCallback($ch, $string) {
   	$httpStatusCode = (int) curl_getinfo($this->curlClient, CURLINFO_HTTP_CODE);
-  	
   	// For unsuccessful responses, i.e. non-200 HTTP responses, we write the response body
   	// into a separate stream.
   	$responseHandle = null;

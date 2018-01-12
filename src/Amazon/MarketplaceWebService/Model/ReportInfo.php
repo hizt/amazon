@@ -66,9 +66,9 @@ class ReportInfo extends Model
         'ReportId' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportType' => array('FieldValue' => null, 'FieldType' => 'string'),
         'ReportRequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'AvailableDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+        'AvailableDate' => array('FieldValue' => null, 'FieldType' => 'string'),
         'Acknowledged' => array('FieldValue' => null, 'FieldType' => 'bool'),
-        'AcknowledgedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
+        'AcknowledgedDate' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }

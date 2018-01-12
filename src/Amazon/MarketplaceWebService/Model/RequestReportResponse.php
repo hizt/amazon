@@ -55,18 +55,17 @@ class RequestReportResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'RequestReportResult' => array('FieldValue' => null, 'FieldType' => 'RequestReportResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+        'RequestReportResult' => array('FieldValue' => null, 'FieldType' => RequestReportResult::className()),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => ResponseMetadata::className()),
         );
         parent::__construct($data);
     }
 
-       
+
     /**
-     * Construct RequestReportResponse from XML string
-     * 
-     * @param string $xml XML string to construct from
+     * @param $xml
      * @return RequestReportResponse
+     * @throws \Exception
      */
     public static function fromXML($xml)
     {
@@ -78,7 +77,7 @@ class RequestReportResponse extends Model
         if ($response->length == 1) {
             return new RequestReportResponse(($response->item(0)));
         } else {
-            throw new Exception ("Unable to construct RequestReportResponse from provided XML. 
+            throw new \Exception ("Unable to construct RequestReportResponse from provided XML. 
                                   Make sure that RequestReportResponse is a root element");
         }
           

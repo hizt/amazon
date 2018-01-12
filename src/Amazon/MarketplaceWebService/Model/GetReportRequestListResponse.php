@@ -55,8 +55,8 @@ class GetReportRequestListResponse extends Model
     public function __construct($data = null)
     {
         $this->fields = array (
-        'GetReportRequestListResult' => array('FieldValue' => null, 'FieldType' => 'GetReportRequestListResult'),
-        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'ResponseMetadata'),
+        'GetReportRequestListResult' => array('FieldValue' => null, 'FieldType' => GetReportRequestListResult::className()),
+        'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => ResponseMetadata::className()),
         );
         parent::__construct($data);
     }

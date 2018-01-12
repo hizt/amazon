@@ -16,6 +16,7 @@
  * 
  */
 namespace Amazon\MarketplaceWebService;
+
 use DateTime;
 use DateTimeZone;
 use DOMElement;
@@ -172,8 +173,6 @@ abstract class Model
                 if ($this->isComplexType($fieldType[0])) {
                     $elements = $xpath->query("./a:$fieldName", $dom);
                     if ($elements->length >= 1) {
-                        //TODO
-                        require_once (str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
                         foreach ($elements as $element) {
                             $this->fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
                         }
@@ -191,8 +190,6 @@ abstract class Model
                 if ($this->isComplexType($fieldType)) {
                     $elements = $xpath->query("./a:$fieldName", $dom);
                     if ($elements->length == 1) {
-                        //TODO
-                        require_once (dirname(__FILE__) . '/../' . str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
                         $this->fields[$fieldName]['FieldValue'] = new $fieldType($elements->item(0));
                     }   
                 } else {
@@ -238,8 +235,6 @@ abstract class Model
                             $elements =  array($elements);    
                         }
                         if (count ($elements) >= 1) {
-                            //TODO
-                            require_once (str_replace('_', DIRECTORY_SEPARATOR, $fieldType[0]) . ".php");
                             foreach ($elements as $element) {
                                 $this->fields[$fieldName]['FieldValue'][] = new $fieldType[0]($element);
                             }
@@ -261,8 +256,6 @@ abstract class Model
             } else {
                 if ($this->isComplexType($fieldType)) {
                     if (array_key_exists($fieldName, $array)) {
-                        //TODO
-                        require_once (str_replace('_', DIRECTORY_SEPARATOR, $fieldType) . ".php");
                         $this->fields[$fieldName]['FieldValue'] = new $fieldType($array[$fieldName]);
                     }   
                 } else {
@@ -283,7 +276,7 @@ abstract class Model
      */
     private function isComplexType ($fieldType) 
     {
-        return preg_match('/^MarketplaceWebService_Model_/', $fieldType);
+        return class_exists($fieldType);
     }
 
    /**
@@ -314,5 +307,13 @@ abstract class Model
     */
     protected function isNumericArray($var) {
         return is_array($var) && array_keys($var) === range(0, sizeof($var) - 1);
+    }
+
+    /**
+     * @return string
+     */
+    public static function className()
+    {
+        return get_called_class();
     }
 }
