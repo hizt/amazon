@@ -20,6 +20,7 @@
  *  @see MarketplaceWebService_Model
  */
 namespace Amazon\MarketplaceWebService\Model;
+use Amazon\MarketplaceWebService\Exception;
 use Amazon\MarketplaceWebService\Model;
 
 
@@ -94,7 +95,7 @@ class SubmitFeedRequest extends Model
     
     private function verifySupportedContentType($supplied) {
     if (!($supplied == self::$DEFAULT_CONTENT_TYPE)) {
-    		throw new MarketplaceWebService_Exception(array('Message' =>
+    		throw new Exception(array('Message' =>
     			"Unsupported ContentType " .  $supplied->getContentType() . 
     			" ContentType must be " . self::$DEFAULT_CONTENT_TYPE->getContentType()));	
     	}
